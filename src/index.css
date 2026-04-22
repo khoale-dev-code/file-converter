@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  /* Khai báo các biến màu sắc hoặc font chuẩn iOS tại đây nếu muốn */
+  --font-sans: "SF Pro Display", "Inter", system-ui, sans-serif;
+}
+
+/* Tailwind v4 tự động quét toàn bộ file trong dự án, 
+   nên bạn không cần khai báo 'content' trong file js nữa. */

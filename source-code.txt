@@ -1,0 +1,3038 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+eslint.config.js
+file-forge-backend/.editorconfig
+file-forge-backend/.git/COMMIT_EDITMSG
+file-forge-backend/.git/config
+file-forge-backend/.git/description
+file-forge-backend/.git/FETCH_HEAD
+file-forge-backend/.git/gk/config
+file-forge-backend/.git/HEAD
+file-forge-backend/.git/hooks/applypatch-msg.sample
+file-forge-backend/.git/hooks/commit-msg.sample
+file-forge-backend/.git/hooks/fsmonitor-watchman.sample
+file-forge-backend/.git/hooks/post-update.sample
+file-forge-backend/.git/hooks/pre-applypatch.sample
+file-forge-backend/.git/hooks/pre-commit.sample
+file-forge-backend/.git/hooks/pre-merge-commit.sample
+file-forge-backend/.git/hooks/pre-push.sample
+file-forge-backend/.git/hooks/pre-rebase.sample
+file-forge-backend/.git/hooks/pre-receive.sample
+file-forge-backend/.git/hooks/prepare-commit-msg.sample
+file-forge-backend/.git/hooks/push-to-checkout.sample
+file-forge-backend/.git/hooks/sendemail-validate.sample
+file-forge-backend/.git/hooks/update.sample
+file-forge-backend/.git/index
+file-forge-backend/.git/info/exclude
+file-forge-backend/.git/objects/01/26e59b82d7cfc3d82de202aa248dcea9b6820b
+file-forge-backend/.git/objects/04/2867c3a3c3cd400fd22e223bba24ba6f099fdb
+file-forge-backend/.git/objects/15/458670030af7eac1022bdd05f1765e9168e2d0
+file-forge-backend/.git/objects/23/95b54eeb269ab6c9216d22d8ada659209de53b
+file-forge-backend/.git/objects/24/a504eb93c9a18b5b81817c75454e676f4e7bb5
+file-forge-backend/.git/objects/41/38168d756e27d0ee0b302b9b5daa0cae9df928
+file-forge-backend/.git/objects/5c/7b5d3c7a750a60b91dfbb070153d316893f136
+file-forge-backend/.git/objects/75/9ddbd3689d70d6b3cc1a67e74af31d59f0cd48
+file-forge-backend/.git/objects/84/4a3680fb02d2eb4e61a8a7b549d8e748b3a21e
+file-forge-backend/.git/objects/93/e7d3d7078f6418624fd26a77c96f3dd4e06c82
+file-forge-backend/.git/objects/97/7f64c4edc458ac13f6e8e346d5f62c1e579556
+file-forge-backend/.git/objects/98/8410d34398dea471f2874bfb2cfdf243dc5e69
+file-forge-backend/.git/objects/a7/27df347a129093f0269058a3c2c543a4ae5497
+file-forge-backend/.git/objects/ba/207852714be77c3933fb130b0c5387856cecfb
+file-forge-backend/.git/objects/d4/804aca360ad3a9f9a7e234070b90c781cd5302
+file-forge-backend/.git/objects/e7/2f403689b8984b827151d70d3b35a17fd02753
+file-forge-backend/.git/objects/e7/3e659201d90d3a1e961501ab0e4cd77403682c
+file-forge-backend/.git/objects/ff/c73e350e1fe43a5f0593b46571797b9d297c1c
+file-forge-backend/.git/refs/heads/master
+file-forge-backend/.gitignore
+file-forge-backend/.prettierrc
+file-forge-backend/.vscode/settings.json
+file-forge-backend/AGENTS.md
+file-forge-backend/package.json
+file-forge-backend/public/index.html
+file-forge-backend/src/index.js
+file-forge-backend/test/index.spec.js
+file-forge-backend/vitest.config.js
+file-forge-backend/wrangler.jsonc
+index.html
+package.json
+public/favicon.svg
+public/icons.svg
+README.md
+src/App.css
+src/App.jsx
+src/assets/hero.png
+src/assets/react.svg
+src/assets/vite.svg
+src/components/BackendToolShell.jsx
+src/components/CompressImage.jsx
+src/components/DocToTxt.jsx
+src/components/ExcelToTxtConverter.jsx
+src/components/Home.jsx
+src/components/OcrToTxt.jsx
+src/components/PdfToTxt.jsx
+src/components/SplitPdf.jsx
+src/index.css
+src/main.jsx
+vite.config.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path="eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
+])
+</file>
+
+<file path="file-forge-backend/.editorconfig">
+# http://editorconfig.org
+root = true
+
+[*]
+indent_style = tab
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.yml]
+indent_style = space
+</file>
+
+<file path="file-forge-backend/.git/COMMIT_EDITMSG">
+Initial commit (by create-cloudflare CLI)
+
+Details:
+  C3 = create-cloudflare@2.66.4
+  project name = file-forge-backend
+  package manager = npm@11.6.2
+  wrangler = wrangler@4.81.1
+  git = 2.46.2.windows.1
+</file>
+
+<file path="file-forge-backend/.git/config">
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+</file>
+
+<file path="file-forge-backend/.git/description">
+Unnamed repository; edit this file 'description' to name the repository.
+</file>
+
+<file path="file-forge-backend/.git/FETCH_HEAD">
+
+</file>
+
+<file path="file-forge-backend/.git/gk/config">
+[branch "master"]
+	gk-last-accessed = 2026-04-13T03:42:46.335Z
+	gk-last-modified = 2026-04-13T03:42:46.523Z
+</file>
+
+<file path="file-forge-backend/.git/HEAD">
+ref: refs/heads/master
+</file>
+
+<file path="file-forge-backend/.git/hooks/applypatch-msg.sample">
+#!/bin/sh
+#
+# An example hook script to check the commit log message taken by
+# applypatch from an e-mail message.
+#
+# The hook should exit with non-zero status after issuing an
+# appropriate message if it wants to stop the commit.  The hook is
+# allowed to edit the commit message file.
+#
+# To enable this hook, rename this file to "applypatch-msg".
+
+. git-sh-setup
+commitmsg="$(git rev-parse --git-path hooks/commit-msg)"
+test -x "$commitmsg" && exec "$commitmsg" ${1+"$@"}
+:
+</file>
+
+<file path="file-forge-backend/.git/hooks/commit-msg.sample">
+#!/bin/sh
+#
+# An example hook script to check the commit log message.
+# Called by "git commit" with one argument, the name of the file
+# that has the commit message.  The hook should exit with non-zero
+# status after issuing an appropriate message if it wants to stop the
+# commit.  The hook is allowed to edit the commit message file.
+#
+# To enable this hook, rename this file to "commit-msg".
+
+# Uncomment the below to add a Signed-off-by line to the message.
+# Doing this in a hook is a bad idea in general, but the prepare-commit-msg
+# hook is more suited to it.
+#
+# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+# grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"
+
+# This example catches duplicate Signed-off-by lines.
+
+test "" = "$(grep '^Signed-off-by: ' "$1" |
+	 sort | uniq -c | sed -e '/^[ 	]*1[ 	]/d')" || {
+	echo >&2 Duplicate Signed-off-by lines.
+	exit 1
+}
+</file>
+
+<file path="file-forge-backend/.git/hooks/fsmonitor-watchman.sample">
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use IPC::Open2;
+
+# An example hook script to integrate Watchman
+# (https://facebook.github.io/watchman/) with git to speed up detecting
+# new and modified files.
+#
+# The hook is passed a version (currently 2) and last update token
+# formatted as a string and outputs to stdout a new update token and
+# all files that have been modified since the update token. Paths must
+# be relative to the root of the working tree and separated by a single NUL.
+#
+# To enable this hook, rename this file to "query-watchman" and set
+# 'git config core.fsmonitor .git/hooks/query-watchman'
+#
+my ($version, $last_update_token) = @ARGV;
+
+# Uncomment for debugging
+# print STDERR "$0 $version $last_update_token\n";
+
+# Check the hook interface version
+if ($version ne 2) {
+	die "Unsupported query-fsmonitor hook version '$version'.\n" .
+	    "Falling back to scanning...\n";
+}
+
+my $git_work_tree = get_working_dir();
+
+my $retry = 1;
+
+my $json_pkg;
+eval {
+	require JSON::XS;
+	$json_pkg = "JSON::XS";
+	1;
+} or do {
+	require JSON::PP;
+	$json_pkg = "JSON::PP";
+};
+
+launch_watchman();
+
+sub launch_watchman {
+	my $o = watchman_query();
+	if (is_work_tree_watched($o)) {
+		output_result($o->{clock}, @{$o->{files}});
+	}
+}
+
+sub output_result {
+	my ($clockid, @files) = @_;
+
+	# Uncomment for debugging watchman output
+	# open (my $fh, ">", ".git/watchman-output.out");
+	# binmode $fh, ":utf8";
+	# print $fh "$clockid\n@files\n";
+	# close $fh;
+
+	binmode STDOUT, ":utf8";
+	print $clockid;
+	print "\0";
+	local $, = "\0";
+	print @files;
+}
+
+sub watchman_clock {
+	my $response = qx/watchman clock "$git_work_tree"/;
+	die "Failed to get clock id on '$git_work_tree'.\n" .
+		"Falling back to scanning...\n" if $? != 0;
+
+	return $json_pkg->new->utf8->decode($response);
+}
+
+sub watchman_query {
+	my $pid = open2(\*CHLD_OUT, \*CHLD_IN, 'watchman -j --no-pretty')
+	or die "open2() failed: $!\n" .
+	"Falling back to scanning...\n";
+
+	# In the query expression below we're asking for names of files that
+	# changed since $last_update_token but not from the .git folder.
+	#
+	# To accomplish this, we're using the "since" generator to use the
+	# recency index to select candidate nodes and "fields" to limit the
+	# output to file names only. Then we're using the "expression" term to
+	# further constrain the results.
+	my $last_update_line = "";
+	if (substr($last_update_token, 0, 1) eq "c") {
+		$last_update_token = "\"$last_update_token\"";
+		$last_update_line = qq[\n"since": $last_update_token,];
+	}
+	my $query = <<"	END";
+		["query", "$git_work_tree", {$last_update_line
+			"fields": ["name"],
+			"expression": ["not", ["dirname", ".git"]]
+		}]
+	END
+
+	# Uncomment for debugging the watchman query
+	# open (my $fh, ">", ".git/watchman-query.json");
+	# print $fh $query;
+	# close $fh;
+
+	print CHLD_IN $query;
+	close CHLD_IN;
+	my $response = do {local $/; <CHLD_OUT>};
+
+	# Uncomment for debugging the watch response
+	# open ($fh, ">", ".git/watchman-response.json");
+	# print $fh $response;
+	# close $fh;
+
+	die "Watchman: command returned no output.\n" .
+	"Falling back to scanning...\n" if $response eq "";
+	die "Watchman: command returned invalid output: $response\n" .
+	"Falling back to scanning...\n" unless $response =~ /^\{/;
+
+	return $json_pkg->new->utf8->decode($response);
+}
+
+sub is_work_tree_watched {
+	my ($output) = @_;
+	my $error = $output->{error};
+	if ($retry > 0 and $error and $error =~ m/unable to resolve root .* directory (.*) is not watched/) {
+		$retry--;
+		my $response = qx/watchman watch "$git_work_tree"/;
+		die "Failed to make watchman watch '$git_work_tree'.\n" .
+		    "Falling back to scanning...\n" if $? != 0;
+		$output = $json_pkg->new->utf8->decode($response);
+		$error = $output->{error};
+		die "Watchman: $error.\n" .
+		"Falling back to scanning...\n" if $error;
+
+		# Uncomment for debugging watchman output
+		# open (my $fh, ">", ".git/watchman-output.out");
+		# close $fh;
+
+		# Watchman will always return all files on the first query so
+		# return the fast "everything is dirty" flag to git and do the
+		# Watchman query just to get it over with now so we won't pay
+		# the cost in git to look up each individual file.
+		my $o = watchman_clock();
+		$error = $output->{error};
+
+		die "Watchman: $error.\n" .
+		"Falling back to scanning...\n" if $error;
+
+		output_result($o->{clock}, ("/"));
+		$last_update_token = $o->{clock};
+
+		eval { launch_watchman() };
+		return 0;
+	}
+
+	die "Watchman: $error.\n" .
+	"Falling back to scanning...\n" if $error;
+
+	return 1;
+}
+
+sub get_working_dir {
+	my $working_dir;
+	if ($^O =~ 'msys' || $^O =~ 'cygwin') {
+		$working_dir = Win32::GetCwd();
+		$working_dir =~ tr/\\/\//;
+	} else {
+		require Cwd;
+		$working_dir = Cwd::cwd();
+	}
+
+	return $working_dir;
+}
+</file>
+
+<file path="file-forge-backend/.git/hooks/post-update.sample">
+#!/bin/sh
+#
+# An example hook script to prepare a packed repository for use over
+# dumb transports.
+#
+# To enable this hook, rename this file to "post-update".
+
+exec git update-server-info
+</file>
+
+<file path="file-forge-backend/.git/hooks/pre-applypatch.sample">
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed
+# by applypatch from an e-mail message.
+#
+# The hook should exit with non-zero status after issuing an
+# appropriate message if it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-applypatch".
+
+. git-sh-setup
+precommit="$(git rev-parse --git-path hooks/pre-commit)"
+test -x "$precommit" && exec "$precommit" ${1+"$@"}
+:
+</file>
+
+<file path="file-forge-backend/.git/hooks/pre-commit.sample">
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-commit".
+
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+	against=HEAD
+else
+	# Initial commit: diff against an empty tree object
+	against=$(git hash-object -t tree /dev/null)
+fi
+
+# If you want to allow non-ASCII filenames set this variable to true.
+allownonascii=$(git config --type=bool hooks.allownonascii)
+
+# Redirect output to stderr.
+exec 1>&2
+
+# Cross platform projects tend to avoid non-ASCII filenames; prevent
+# them from being added to the repository. We exploit the fact that the
+# printable range starts at the space character and ends with tilde.
+if [ "$allownonascii" != "true" ] &&
+	# Note that the use of brackets around a tr range is ok here, (it's
+	# even required, for portability to Solaris 10's /usr/bin/tr), since
+	# the square bracket bytes happen to fall in the designated range.
+	test $(git diff-index --cached --name-only --diff-filter=A -z $against |
+	  LC_ALL=C tr -d '[ -~]\0' | wc -c) != 0
+then
+	cat <<\EOF
+Error: Attempt to add a non-ASCII file name.
+
+This can cause problems if you want to work with people on other platforms.
+
+To be portable it is advisable to rename the file.
+
+If you know what you are doing you can disable this check using:
+
+  git config hooks.allownonascii true
+EOF
+	exit 1
+fi
+
+# If there are whitespace errors, print the offending file names and fail.
+exec git diff-index --check --cached $against --
+</file>
+
+<file path="file-forge-backend/.git/hooks/pre-merge-commit.sample">
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git merge" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message to
+# stderr if it wants to stop the merge commit.
+#
+# To enable this hook, rename this file to "pre-merge-commit".
+
+. git-sh-setup
+test -x "$GIT_DIR/hooks/pre-commit" &&
+        exec "$GIT_DIR/hooks/pre-commit"
+:
+</file>
+
+<file path="file-forge-backend/.git/hooks/pre-push.sample">
+#!/bin/sh
+
+# An example hook script to verify what is about to be pushed.  Called by "git
+# push" after it has checked the remote status, but before anything has been
+# pushed.  If this script exits with a non-zero status nothing will be pushed.
+#
+# This hook is called with the following parameters:
+#
+# $1 -- Name of the remote to which the push is being done
+# $2 -- URL to which the push is being done
+#
+# If pushing without using a named remote those arguments will be equal.
+#
+# Information about the commits which are being pushed is supplied as lines to
+# the standard input in the form:
+#
+#   <local ref> <local oid> <remote ref> <remote oid>
+#
+# This sample shows how to prevent push of commits where the log message starts
+# with "WIP" (work in progress).
+
+remote="$1"
+url="$2"
+
+zero=$(git hash-object --stdin </dev/null | tr '[0-9a-f]' '0')
+
+while read local_ref local_oid remote_ref remote_oid
+do
+	if test "$local_oid" = "$zero"
+	then
+		# Handle delete
+		:
+	else
+		if test "$remote_oid" = "$zero"
+		then
+			# New branch, examine all commits
+			range="$local_oid"
+		else
+			# Update to existing branch, examine new commits
+			range="$remote_oid..$local_oid"
+		fi
+
+		# Check for WIP commit
+		commit=$(git rev-list -n 1 --grep '^WIP' "$range")
+		if test -n "$commit"
+		then
+			echo >&2 "Found WIP commit in $local_ref, not pushing"
+			exit 1
+		fi
+	fi
+done
+
+exit 0
+</file>
+
+<file path="file-forge-backend/.git/hooks/pre-rebase.sample">
+#!/bin/sh
+#
+# Copyright (c) 2006, 2008 Junio C Hamano
+#
+# The "pre-rebase" hook is run just before "git rebase" starts doing
+# its job, and can prevent the command from running by exiting with
+# non-zero status.
+#
+# The hook is called with the following parameters:
+#
+# $1 -- the upstream the series was forked from.
+# $2 -- the branch being rebased (or empty when rebasing the current branch).
+#
+# This sample shows how to prevent topic branches that are already
+# merged to 'next' branch from getting rebased, because allowing it
+# would result in rebasing already published history.
+
+publish=next
+basebranch="$1"
+if test "$#" = 2
+then
+	topic="refs/heads/$2"
+else
+	topic=`git symbolic-ref HEAD` ||
+	exit 0 ;# we do not interrupt rebasing detached HEAD
+fi
+
+case "$topic" in
+refs/heads/??/*)
+	;;
+*)
+	exit 0 ;# we do not interrupt others.
+	;;
+esac
+
+# Now we are dealing with a topic branch being rebased
+# on top of master.  Is it OK to rebase it?
+
+# Does the topic really exist?
+git show-ref -q "$topic" || {
+	echo >&2 "No such branch $topic"
+	exit 1
+}
+
+# Is topic fully merged to master?
+not_in_master=`git rev-list --pretty=oneline ^master "$topic"`
+if test -z "$not_in_master"
+then
+	echo >&2 "$topic is fully merged to master; better remove it."
+	exit 1 ;# we could allow it, but there is no point.
+fi
+
+# Is topic ever merged to next?  If so you should not be rebasing it.
+only_next_1=`git rev-list ^master "^$topic" ${publish} | sort`
+only_next_2=`git rev-list ^master           ${publish} | sort`
+if test "$only_next_1" = "$only_next_2"
+then
+	not_in_topic=`git rev-list "^$topic" master`
+	if test -z "$not_in_topic"
+	then
+		echo >&2 "$topic is already up to date with master"
+		exit 1 ;# we could allow it, but there is no point.
+	else
+		exit 0
+	fi
+else
+	not_in_next=`git rev-list --pretty=oneline ^${publish} "$topic"`
+	/usr/bin/perl -e '
+		my $topic = $ARGV[0];
+		my $msg = "* $topic has commits already merged to public branch:\n";
+		my (%not_in_next) = map {
+			/^([0-9a-f]+) /;
+			($1 => 1);
+		} split(/\n/, $ARGV[1]);
+		for my $elem (map {
+				/^([0-9a-f]+) (.*)$/;
+				[$1 => $2];
+			} split(/\n/, $ARGV[2])) {
+			if (!exists $not_in_next{$elem->[0]}) {
+				if ($msg) {
+					print STDERR $msg;
+					undef $msg;
+				}
+				print STDERR " $elem->[1]\n";
+			}
+		}
+	' "$topic" "$not_in_next" "$not_in_master"
+	exit 1
+fi
+
+<<\DOC_END
+
+This sample hook safeguards topic branches that have been
+published from being rewound.
+
+The workflow assumed here is:
+
+ * Once a topic branch forks from "master", "master" is never
+   merged into it again (either directly or indirectly).
+
+ * Once a topic branch is fully cooked and merged into "master",
+   it is deleted.  If you need to build on top of it to correct
+   earlier mistakes, a new topic branch is created by forking at
+   the tip of the "master".  This is not strictly necessary, but
+   it makes it easier to keep your history simple.
+
+ * Whenever you need to test or publish your changes to topic
+   branches, merge them into "next" branch.
+
+The script, being an example, hardcodes the publish branch name
+to be "next", but it is trivial to make it configurable via
+$GIT_DIR/config mechanism.
+
+With this workflow, you would want to know:
+
+(1) ... if a topic branch has ever been merged to "next".  Young
+    topic branches can have stupid mistakes you would rather
+    clean up before publishing, and things that have not been
+    merged into other branches can be easily rebased without
+    affecting other people.  But once it is published, you would
+    not want to rewind it.
+
+(2) ... if a topic branch has been fully merged to "master".
+    Then you can delete it.  More importantly, you should not
+    build on top of it -- other people may already want to
+    change things related to the topic as patches against your
+    "master", so if you need further changes, it is better to
+    fork the topic (perhaps with the same name) afresh from the
+    tip of "master".
+
+Let's look at this example:
+
+		   o---o---o---o---o---o---o---o---o---o "next"
+		  /       /           /           /
+		 /   a---a---b A     /           /
+		/   /               /           /
+	       /   /   c---c---c---c B         /
+	      /   /   /             \         /
+	     /   /   /   b---b C     \       /
+	    /   /   /   /             \     /
+    ---o---o---o---o---o---o---o---o---o---o---o "master"
+
+
+A, B and C are topic branches.
+
+ * A has one fix since it was merged up to "next".
+
+ * B has finished.  It has been fully merged up to "master" and "next",
+   and is ready to be deleted.
+
+ * C has not merged to "next" at all.
+
+We would want to allow C to be rebased, refuse A, and encourage
+B to be deleted.
+
+To compute (1):
+
+	git rev-list ^master ^topic next
+	git rev-list ^master        next
+
+	if these match, topic has not merged in next at all.
+
+To compute (2):
+
+	git rev-list master..topic
+
+	if this is empty, it is fully merged to "master".
+
+DOC_END
+</file>
+
+<file path="file-forge-backend/.git/hooks/pre-receive.sample">
+#!/bin/sh
+#
+# An example hook script to make use of push options.
+# The example simply echoes all push options that start with 'echoback='
+# and rejects all pushes when the "reject" push option is used.
+#
+# To enable this hook, rename this file to "pre-receive".
+
+if test -n "$GIT_PUSH_OPTION_COUNT"
+then
+	i=0
+	while test "$i" -lt "$GIT_PUSH_OPTION_COUNT"
+	do
+		eval "value=\$GIT_PUSH_OPTION_$i"
+		case "$value" in
+		echoback=*)
+			echo "echo from the pre-receive-hook: ${value#*=}" >&2
+			;;
+		reject)
+			exit 1
+		esac
+		i=$((i + 1))
+	done
+fi
+</file>
+
+<file path="file-forge-backend/.git/hooks/prepare-commit-msg.sample">
+#!/bin/sh
+#
+# An example hook script to prepare the commit log message.
+# Called by "git commit" with the name of the file that has the
+# commit message, followed by the description of the commit
+# message's source.  The hook's purpose is to edit the commit
+# message file.  If the hook fails with a non-zero status,
+# the commit is aborted.
+#
+# To enable this hook, rename this file to "prepare-commit-msg".
+
+# This hook includes three examples. The first one removes the
+# "# Please enter the commit message..." help message.
+#
+# The second includes the output of "git diff --name-status -r"
+# into the message, just before the "git status" output.  It is
+# commented because it doesn't cope with --amend or with squashed
+# commits.
+#
+# The third example adds a Signed-off-by line to the message, that can
+# still be edited.  This is rarely a good idea.
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+/usr/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
+
+# case "$COMMIT_SOURCE,$SHA1" in
+#  ,|template,)
+#    /usr/bin/perl -i.bak -pe '
+#       print "\n" . `git diff --cached --name-status -r`
+# 	 if /^#/ && $first++ == 0' "$COMMIT_MSG_FILE" ;;
+#  *) ;;
+# esac
+
+# SOB=$(git var GIT_COMMITTER_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+# git interpret-trailers --in-place --trailer "$SOB" "$COMMIT_MSG_FILE"
+# if test -z "$COMMIT_SOURCE"
+# then
+#   /usr/bin/perl -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
+# fi
+</file>
+
+<file path="file-forge-backend/.git/hooks/push-to-checkout.sample">
+#!/bin/sh
+
+# An example hook script to update a checked-out tree on a git push.
+#
+# This hook is invoked by git-receive-pack(1) when it reacts to git
+# push and updates reference(s) in its repository, and when the push
+# tries to update the branch that is currently checked out and the
+# receive.denyCurrentBranch configuration variable is set to
+# updateInstead.
+#
+# By default, such a push is refused if the working tree and the index
+# of the remote repository has any difference from the currently
+# checked out commit; when both the working tree and the index match
+# the current commit, they are updated to match the newly pushed tip
+# of the branch. This hook is to be used to override the default
+# behaviour; however the code below reimplements the default behaviour
+# as a starting point for convenient modification.
+#
+# The hook receives the commit with which the tip of the current
+# branch is going to be updated:
+commit=$1
+
+# It can exit with a non-zero status to refuse the push (when it does
+# so, it must not modify the index or the working tree).
+die () {
+	echo >&2 "$*"
+	exit 1
+}
+
+# Or it can make any necessary changes to the working tree and to the
+# index to bring them to the desired state when the tip of the current
+# branch is updated to the new commit, and exit with a zero status.
+#
+# For example, the hook can simply run git read-tree -u -m HEAD "$1"
+# in order to emulate git fetch that is run in the reverse direction
+# with git push, as the two-tree form of git read-tree -u -m is
+# essentially the same as git switch or git checkout that switches
+# branches while keeping the local changes in the working tree that do
+# not interfere with the difference between the branches.
+
+# The below is a more-or-less exact translation to shell of the C code
+# for the default behaviour for git's push-to-checkout hook defined in
+# the push_to_deploy() function in builtin/receive-pack.c.
+#
+# Note that the hook will be executed from the repository directory,
+# not from the working tree, so if you want to perform operations on
+# the working tree, you will have to adapt your code accordingly, e.g.
+# by adding "cd .." or using relative paths.
+
+if ! git update-index -q --ignore-submodules --refresh
+then
+	die "Up-to-date check failed"
+fi
+
+if ! git diff-files --quiet --ignore-submodules --
+then
+	die "Working directory has unstaged changes"
+fi
+
+# This is a rough translation of:
+#
+#   head_has_history() ? "HEAD" : EMPTY_TREE_SHA1_HEX
+if git cat-file -e HEAD 2>/dev/null
+then
+	head=HEAD
+else
+	head=$(git hash-object -t tree --stdin </dev/null)
+fi
+
+if ! git diff-index --quiet --cached --ignore-submodules $head --
+then
+	die "Working directory has staged changes"
+fi
+
+if ! git read-tree -u -m "$commit"
+then
+	die "Could not update working tree to new HEAD"
+fi
+</file>
+
+<file path="file-forge-backend/.git/hooks/sendemail-validate.sample">
+#!/bin/sh
+
+# An example hook script to validate a patch (and/or patch series) before
+# sending it via email.
+#
+# The hook should exit with non-zero status after issuing an appropriate
+# message if it wants to prevent the email(s) from being sent.
+#
+# To enable this hook, rename this file to "sendemail-validate".
+#
+# By default, it will only check that the patch(es) can be applied on top of
+# the default upstream branch without conflicts in a secondary worktree. After
+# validation (successful or not) of the last patch of a series, the worktree
+# will be deleted.
+#
+# The following config variables can be set to change the default remote and
+# remote ref that are used to apply the patches against:
+#
+#   sendemail.validateRemote (default: origin)
+#   sendemail.validateRemoteRef (default: HEAD)
+#
+# Replace the TODO placeholders with appropriate checks according to your
+# needs.
+
+validate_cover_letter () {
+	file="$1"
+	# TODO: Replace with appropriate checks (e.g. spell checking).
+	true
+}
+
+validate_patch () {
+	file="$1"
+	# Ensure that the patch applies without conflicts.
+	git am -3 "$file" || return
+	# TODO: Replace with appropriate checks for this patch
+	# (e.g. checkpatch.pl).
+	true
+}
+
+validate_series () {
+	# TODO: Replace with appropriate checks for the whole series
+	# (e.g. quick build, coding style checks, etc.).
+	true
+}
+
+# main -------------------------------------------------------------------------
+
+if test "$GIT_SENDEMAIL_FILE_COUNTER" = 1
+then
+	remote=$(git config --default origin --get sendemail.validateRemote) &&
+	ref=$(git config --default HEAD --get sendemail.validateRemoteRef) &&
+	worktree=$(mktemp --tmpdir -d sendemail-validate.XXXXXXX) &&
+	git worktree add -fd --checkout "$worktree" "refs/remotes/$remote/$ref" &&
+	git config --replace-all sendemail.validateWorktree "$worktree"
+else
+	worktree=$(git config --get sendemail.validateWorktree)
+fi || {
+	echo "sendemail-validate: error: failed to prepare worktree" >&2
+	exit 1
+}
+
+unset GIT_DIR GIT_WORK_TREE
+cd "$worktree" &&
+
+if grep -q "^diff --git " "$1"
+then
+	validate_patch "$1"
+else
+	validate_cover_letter "$1"
+fi &&
+
+if test "$GIT_SENDEMAIL_FILE_COUNTER" = "$GIT_SENDEMAIL_FILE_TOTAL"
+then
+	git config --unset-all sendemail.validateWorktree &&
+	trap 'git worktree remove -ff "$worktree"' EXIT &&
+	validate_series
+fi
+</file>
+
+<file path="file-forge-backend/.git/hooks/update.sample">
+#!/bin/sh
+#
+# An example hook script to block unannotated tags from entering.
+# Called by "git receive-pack" with arguments: refname sha1-old sha1-new
+#
+# To enable this hook, rename this file to "update".
+#
+# Config
+# ------
+# hooks.allowunannotated
+#   This boolean sets whether unannotated tags will be allowed into the
+#   repository.  By default they won't be.
+# hooks.allowdeletetag
+#   This boolean sets whether deleting tags will be allowed in the
+#   repository.  By default they won't be.
+# hooks.allowmodifytag
+#   This boolean sets whether a tag may be modified after creation. By default
+#   it won't be.
+# hooks.allowdeletebranch
+#   This boolean sets whether deleting branches will be allowed in the
+#   repository.  By default they won't be.
+# hooks.denycreatebranch
+#   This boolean sets whether remotely creating branches will be denied
+#   in the repository.  By default this is allowed.
+#
+
+# --- Command line
+refname="$1"
+oldrev="$2"
+newrev="$3"
+
+# --- Safety check
+if [ -z "$GIT_DIR" ]; then
+	echo "Don't run this script from the command line." >&2
+	echo " (if you want, you could supply GIT_DIR then run" >&2
+	echo "  $0 <ref> <oldrev> <newrev>)" >&2
+	exit 1
+fi
+
+if [ -z "$refname" -o -z "$oldrev" -o -z "$newrev" ]; then
+	echo "usage: $0 <ref> <oldrev> <newrev>" >&2
+	exit 1
+fi
+
+# --- Config
+allowunannotated=$(git config --type=bool hooks.allowunannotated)
+allowdeletebranch=$(git config --type=bool hooks.allowdeletebranch)
+denycreatebranch=$(git config --type=bool hooks.denycreatebranch)
+allowdeletetag=$(git config --type=bool hooks.allowdeletetag)
+allowmodifytag=$(git config --type=bool hooks.allowmodifytag)
+
+# check for no description
+projectdesc=$(sed -e '1q' "$GIT_DIR/description")
+case "$projectdesc" in
+"Unnamed repository"* | "")
+	echo "*** Project description file hasn't been set" >&2
+	exit 1
+	;;
+esac
+
+# --- Check types
+# if $newrev is 0000...0000, it's a commit to delete a ref.
+zero=$(git hash-object --stdin </dev/null | tr '[0-9a-f]' '0')
+if [ "$newrev" = "$zero" ]; then
+	newrev_type=delete
+else
+	newrev_type=$(git cat-file -t $newrev)
+fi
+
+case "$refname","$newrev_type" in
+	refs/tags/*,commit)
+		# un-annotated tag
+		short_refname=${refname##refs/tags/}
+		if [ "$allowunannotated" != "true" ]; then
+			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
+			echo "*** Use 'git tag [ -a | -s ]' for tags you want to propagate." >&2
+			exit 1
+		fi
+		;;
+	refs/tags/*,delete)
+		# delete tag
+		if [ "$allowdeletetag" != "true" ]; then
+			echo "*** Deleting a tag is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	refs/tags/*,tag)
+		# annotated tag
+		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
+		then
+			echo "*** Tag '$refname' already exists." >&2
+			echo "*** Modifying a tag is not allowed in this repository." >&2
+			exit 1
+		fi
+		;;
+	refs/heads/*,commit)
+		# branch
+		if [ "$oldrev" = "$zero" -a "$denycreatebranch" = "true" ]; then
+			echo "*** Creating a branch is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	refs/heads/*,delete)
+		# delete branch
+		if [ "$allowdeletebranch" != "true" ]; then
+			echo "*** Deleting a branch is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	refs/remotes/*,commit)
+		# tracking branch
+		;;
+	refs/remotes/*,delete)
+		# delete tracking branch
+		if [ "$allowdeletebranch" != "true" ]; then
+			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
+			exit 1
+		fi
+		;;
+	*)
+		# Anything else (is there anything else?)
+		echo "*** Update hook: unknown type of update to ref $refname of type $newrev_type" >&2
+		exit 1
+		;;
+esac
+
+# --- Finished
+exit 0
+</file>
+
+<file path="file-forge-backend/.git/info/exclude">
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+</file>
+
+<file path="file-forge-backend/.git/refs/heads/master">
+15458670030af7eac1022bdd05f1765e9168e2d0
+</file>
+
+<file path="file-forge-backend/.gitignore">
+# Logs
+
+logs
+_.log
+npm-debug.log_
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+
+report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+
+# Runtime data
+
+pids
+_.pid
+_.seed
+\*.pid.lock
+
+# Directory for instrumented libs generated by jscoverage/JSCover
+
+lib-cov
+
+# Coverage directory used by tools like istanbul
+
+coverage
+\*.lcov
+
+# nyc test coverage
+
+.nyc_output
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+
+bower_components
+
+# node-waf configuration
+
+.lock-wscript
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+
+build/Release
+
+# Dependency directories
+
+node_modules/
+jspm_packages/
+
+# Snowpack dependency directory (https://snowpack.dev/)
+
+web_modules/
+
+# TypeScript cache
+
+\*.tsbuildinfo
+
+# Optional npm cache directory
+
+.npm
+
+# Optional eslint cache
+
+.eslintcache
+
+# Optional stylelint cache
+
+.stylelintcache
+
+# Microbundle cache
+
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+
+.node_repl_history
+
+# Output of 'npm pack'
+
+\*.tgz
+
+# Yarn Integrity file
+
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+
+.cache
+.parcel-cache
+
+# Next.js build output
+
+.next
+out
+
+# Nuxt.js build / generate output
+
+.nuxt
+dist
+
+# Gatsby files
+
+.cache/
+
+# Comment in the public line in if your project uses Gatsby and not Next.js
+
+# https://nextjs.org/blog/next-9-1#public-directory-support
+
+# public
+
+# vuepress build output
+
+.vuepress/dist
+
+# vuepress v2.x temp and cache directory
+
+.temp
+.cache
+
+# Docusaurus cache and generated files
+
+.docusaurus
+
+# Serverless directories
+
+.serverless/
+
+# FuseBox cache
+
+.fusebox/
+
+# DynamoDB Local files
+
+.dynamodb/
+
+# TernJS port file
+
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+
+.vscode-test
+
+# yarn v2
+
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.\*
+
+# wrangler project
+
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+.wrangler/
+</file>
+
+<file path="file-forge-backend/.prettierrc">
+{
+	"printWidth": 140,
+	"singleQuote": true,
+	"semi": true,
+	"useTabs": true
+}
+</file>
+
+<file path="file-forge-backend/.vscode/settings.json">
+{
+	"files.associations": {
+		"wrangler.json": "jsonc"
+	}
+}
+</file>
+
+<file path="file-forge-backend/AGENTS.md">
+# Cloudflare Workers
+
+STOP. Your knowledge of Cloudflare Workers APIs and limits may be outdated. Always retrieve current documentation before any Workers, KV, R2, D1, Durable Objects, Queues, Vectorize, AI, or Agents SDK task.
+
+## Docs
+
+- https://developers.cloudflare.com/workers/
+- MCP: `https://docs.mcp.cloudflare.com/mcp`
+
+For all limits and quotas, retrieve from the product's `/platform/limits/` page. eg. `/workers/platform/limits`
+
+## Commands
+
+| Command | Purpose |
+|---------|---------|
+| `npx wrangler dev` | Local development |
+| `npx wrangler deploy` | Deploy to Cloudflare |
+| `npx wrangler types` | Generate TypeScript types |
+
+Run `wrangler types` after changing bindings in wrangler.jsonc.
+
+## Node.js Compatibility
+
+https://developers.cloudflare.com/workers/runtime-apis/nodejs/
+
+## Errors
+
+- **Error 1102** (CPU/Memory exceeded): Retrieve limits from `/workers/platform/limits/`
+- **All errors**: https://developers.cloudflare.com/workers/observability/errors/
+
+## Product Docs
+
+Retrieve API references and limits from:
+`/kv/` · `/r2/` · `/d1/` · `/durable-objects/` · `/queues/` · `/vectorize/` · `/workers-ai/` · `/agents/`
+</file>
+
+<file path="file-forge-backend/package.json">
+{
+  "name": "file-forge-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.12.4",
+    "vitest": "~3.2.0",
+    "wrangler": "^4.81.1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1029.0",
+    "@aws-sdk/s3-request-presigner": "^3.1029.0"
+  }
+}
+</file>
+
+<file path="file-forge-backend/public/index.html">
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hello, World!</title>
+	</head>
+	<body>
+		<h1 id="heading"></h1>
+		<p>This page comes from a static asset stored at `public/index.html` as configured in `wrangler.jsonc`.</p>
+		<button id="button" type="button">Fetch a random UUID</button>
+		<output id="random" for="button"></output>
+		<script>
+			fetch('/message')
+				.then((resp) => resp.text())
+				.then((text) => {
+					const h1 = document.getElementById('heading');
+					h1.textContent = text;
+				});
+
+			const button = document.getElementById("button");
+			button.addEventListener("click", () => {
+				fetch('/random')
+					.then((resp) => resp.text())
+					.then((text) => {
+						const random = document.getElementById('random');
+						random.textContent = text;
+					});
+			});
+		</script>
+	</body>
+</html>
+</file>
+
+<file path="file-forge-backend/src/index.js">
+import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+
+    // 1. Cấu hình CORS tối ưu cho năm 2026
+    const corsHeaders = {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, x-amz-checksum-crc32, x-amz-sdk-checksum-algorithm",
+    };
+
+    if (request.method === "OPTIONS") {
+      return new Response(null, { headers: corsHeaders });
+    }
+
+    const API_TOKEN = "PlaqkxUAGmgBVQisDpvwZwh5I84ZKmT9";
+
+    // ------------------------------------------------------------------
+    // ENDPOINT 1: TẠO PRESIGNED URL (Sửa lỗi Checksum & Path Style)
+    // ------------------------------------------------------------------
+    if (request.method === "POST" && url.pathname === "/get-presigned-url") {
+      try {
+        const { fileName, contentType } = await request.json();
+        const fileId = `${Date.now()}_${fileName.replace(/\s+/g, '_')}`;
+        const key = `uploads/${fileId}`;
+
+        // Cấu hình S3 Client chuẩn cho Cloudflare R2
+        const s3 = new S3Client({
+          region: "auto",
+          endpoint: `https://${env.ACCOUNT_ID}.r2.cloudflarestorage.com`,
+          credentials: {
+            accessKeyId: env.R2_ACCESS_KEY_ID,
+            secretAccessKey: env.R2_SECRET_ACCESS_KEY,
+          },
+          // QUAN TRỌNG: Ép dùng Path Style để tránh lỗi phân giải tên miền con của R2
+          forcePathStyle: true,
+          // QUAN TRỌNG: Vô hiệu hóa việc tự động tính toán Checksum gây lỗi Connection Aborted
+          requestChecksumCalculation: "WHEN_REQUIRED",
+          responseChecksumValidation: "WHEN_REQUIRED",
+        });
+
+       const command = new PutObjectCommand({
+		Bucket: "file-forge-storage",
+		Key: key,
+		ContentType: contentType,
+		// Ép buộc không dùng bất kỳ thuật toán checksum nào
+		ChecksumAlgorithm: undefined
+		});
+
+        // Tạo URL ký sẵn và loại bỏ các Header gây lỗi khỏi chữ ký
+        const signedUrl = await getSignedUrl(s3, command, {
+          expiresIn: 3600,
+          unhoistableHeaders: new Set([
+            'x-amz-checksum-algorithm',
+            'x-amz-checksum-crc32',
+            'x-amz-sdk-checksum-algorithm'
+          ])
+        });
+
+        return new Response(JSON.stringify({ signedUrl, fileKey: key, fileId }), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      } catch (error) {
+        return new Response(JSON.stringify({ error: error.message }), {
+          status: 500,
+          headers: corsHeaders
+        });
+      }
+    }
+
+    // ------------------------------------------------------------------
+    // ENDPOINT 2: XỬ LÝ FILE (ConvertAPI)
+    // ------------------------------------------------------------------
+    if (request.method === "POST" && url.pathname === "/process") {
+      try {
+        let fileBuffer, originalName, action, options;
+        const contentTypeHeader = request.headers.get("content-type") || "";
+
+        if (contentTypeHeader.includes("application/json")) {
+          const body = await request.json();
+          action = body.action;
+          options = body.options;
+
+          const object = await env.FILE_STORAGE.get(body.fileKey);
+          if (!object) throw new Error("File không tồn tại trên kho lưu trữ.");
+
+          fileBuffer = await object.arrayBuffer();
+          originalName = body.fileKey.split('_').slice(1).join('_') || "file.pdf";
+        }
+        else if (contentTypeHeader.includes("multipart/form-data")) {
+          const formData = await request.formData();
+          const file = formData.get("file");
+          action = formData.get("action");
+          options = formData.get("options");
+          if (!file) throw new Error("Thiếu file upload.");
+          fileBuffer = await file.arrayBuffer();
+          originalName = file.name;
+        }
+
+        const baseName = originalName.substring(0, originalName.lastIndexOf('.'));
+        const actionMap = {
+          "Convert DOCX to PDF": { endpoint: "docx/to/pdf", ext: "pdf" },
+          "Convert PDF to DOCX": { endpoint: "pdf/to/docx", ext: "docx" },
+          "Convert Excel to PDF": { endpoint: "xlsx/to/pdf", ext: "pdf" },
+          "Compress PDF": { endpoint: "pdf/to/optimize", ext: "pdf" },
+          "Compress DOCX": { endpoint: "docx/to/optimize", ext: "docx" },
+          "Split PDF": { endpoint: "pdf/to/split", ext: "pdf" }
+        };
+
+        const config = actionMap[action];
+        if (!config) throw new Error("Chức năng này hiện chưa khả dụng.");
+
+        const apiFormData = new FormData();
+        apiFormData.append('File', new Blob([fileBuffer]), originalName);
+        if (action === "Split PDF" && options) apiFormData.append('Pages', options);
+
+        const convertReq = await fetch(`https://v2.convertapi.com/convert/${config.endpoint}?Secret=${API_TOKEN}`, {
+          method: 'POST',
+          body: apiFormData
+        });
+
+        const convertRes = await convertReq.json();
+
+        if (convertRes.Files && convertRes.Files.length > 0) {
+          const fileData = convertRes.Files[0];
+          const binaryString = atob(fileData.FileData);
+          const bytes = new Uint8Array(binaryString.length);
+          for (let i = 0; i < binaryString.length; i++) {
+              bytes[i] = binaryString.charCodeAt(i);
+          }
+
+          const finalFileName = `${baseName}.${config.ext}`;
+          const fileId = `${Date.now()}_${finalFileName.replace(/\s+/g, '_')}`;
+
+          await env.FILE_STORAGE.put(`processed/${fileId}`, bytes.buffer);
+
+          return new Response(JSON.stringify({
+            success: true,
+            downloadUrl: `${url.origin}/download/${fileId}`,
+            fileName: finalFileName
+          }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
+        } else {
+          throw new Error(convertRes.Message || "ConvertAPI gặp sự cố.");
+        }
+      } catch (error) {
+        return new Response(JSON.stringify({ error: error.message }), {
+          status: 500,
+          headers: corsHeaders
+        });
+      }
+    }
+
+    // ------------------------------------------------------------------
+    // ENDPOINT 3: TẢI FILE
+    // ------------------------------------------------------------------
+    if (request.method === "GET" && url.pathname.startsWith("/download/")) {
+      const fileName = url.pathname.split("/download/")[1];
+      const object = await env.FILE_STORAGE.get(`processed/${fileName}`);
+      if (!object) return new Response("File không tồn tại", { status: 404, headers: corsHeaders });
+
+      const headers = new Headers(corsHeaders);
+      object.writeHttpMetadata(headers);
+      headers.set("Content-Disposition", `attachment; filename="${fileName}"`);
+      return new Response(object.body, { headers });
+    }
+
+    return new Response("File Forge API v2 is Live", { headers: corsHeaders });
+  },
+};
+</file>
+
+<file path="file-forge-backend/test/index.spec.js">
+import {
+	env,
+	createExecutionContext,
+	waitOnExecutionContext,
+	SELF,
+} from "cloudflare:test";
+import { describe, it, expect } from "vitest";
+import worker from "../src";
+
+describe("Hello World user worker", () => {
+	describe("request for /message", () => {
+		it('/ responds with "Hello, World!" (unit style)', async () => {
+			const request = new Request("http://example.com/message");
+			// Create an empty context to pass to `worker.fetch()`.
+			const ctx = createExecutionContext();
+			const response = await worker.fetch(request, env, ctx);
+			// Wait for all `Promise`s passed to `ctx.waitUntil()` to settle before running test assertions
+			await waitOnExecutionContext(ctx);
+			expect(await response.text()).toMatchInlineSnapshot(`"Hello, World!"`);
+		});
+
+		it('responds with "Hello, World!" (integration style)', async () => {
+			const request = new Request("http://example.com/message");
+			const response = await SELF.fetch(request);
+			expect(await response.text()).toMatchInlineSnapshot(`"Hello, World!"`);
+		});
+	});
+
+	describe("request for /random", () => {
+		it("/ responds with a random UUID (unit style)", async () => {
+			const request = new Request("http://example.com/random");
+			// Create an empty context to pass to `worker.fetch()`.
+			const ctx = createExecutionContext();
+			const response = await worker.fetch(request, env, ctx);
+			// Wait for all `Promise`s passed to `ctx.waitUntil()` to settle before running test assertions
+			await waitOnExecutionContext(ctx);
+			expect(await response.text()).toMatch(
+				/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/
+			);
+		});
+
+		it("responds with a random UUID (integration style)", async () => {
+			const request = new Request("http://example.com/random");
+			const response = await SELF.fetch(request);
+			expect(await response.text()).toMatch(
+				/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/
+			);
+		});
+	});
+});
+</file>
+
+<file path="file-forge-backend/vitest.config.js">
+import { defineWorkersConfig } from '@cloudflare/vitest-pool-workers/config';
+
+export default defineWorkersConfig({
+	test: {
+		poolOptions: {
+			workers: {
+				wrangler: { configPath: './wrangler.jsonc' },
+			},
+		},
+	},
+});
+</file>
+
+<file path="file-forge-backend/wrangler.jsonc">
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "file-forge-backend",
+	"main": "src/index.js",
+	"compatibility_date": "2026-04-13",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+	"assets": {
+		// The path to the directory containing the `index.html` file to be served at `/`
+		"directory": "./public"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"upload_source_maps": true,
+	/**
+     * Smart Placement
+     * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
+     */
+	// "placement": {  "mode": "smart" },
+	/**
+     * Bindings
+     * Bindings allow your Worker to interact with resources on the Cloudflare Developer Platform, including
+     * databases, object storage, AI inference, real-time communication and more.
+     * https://developers.cloudflare.com/workers/runtime-apis/bindings/
+     */
+	// ĐÂY LÀ ĐOẠN CẤU HÌNH R2 MÌNH VỪA THÊM VÀO:
+	"r2_buckets": [
+        {
+            "binding": "FILE_STORAGE",
+            "bucket_name": "file-forge-storage"
+        }
+    ],
+    "compatibility_flags": [
+        "nodejs_compat"
+    ]
+	/**
+     * Environment Variables
+     * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
+     * Note: Use secrets to store sensitive data.
+     * https://developers.cloudflare.com/workers/configuration/secrets/
+     */
+	// "vars": {  "MY_VARIABLE": "production_value" }
+	/**
+     * Service Bindings (communicate between multiple Workers)
+     * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
+     */
+	// "services": [  {   "binding": "MY_SERVICE",   "service": "my-service"  } ]
+}
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>file-converter</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+</file>
+
+<file path="package.json">
+{
+  "name": "file-converter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "browser-image-compression": "^2.0.2",
+    "docx": "^9.6.1",
+    "lucide-react": "^1.8.0",
+    "mammoth": "^1.12.0",
+    "pdfjs-dist": "^5.6.205",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.14.0",
+    "tesseract.js": "^7.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "postcss": "^8.5.9",
+    "tailwindcss": "^4.2.2",
+    "vite": "^8.0.4"
+  }
+}
+</file>
+
+<file path="public/favicon.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
+</file>
+
+<file path="public/icons.svg">
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="bluesky-icon" viewBox="0 0 16 17">
+    <g clip-path="url(#bluesky-clip)"><path fill="#08060d" d="M7.75 7.735c-.693-1.348-2.58-3.86-4.334-5.097-1.68-1.187-2.32-.981-2.74-.79C.188 2.065.1 2.812.1 3.251s.241 3.602.398 4.13c.52 1.744 2.367 2.333 4.07 2.145-2.495.37-4.71 1.278-1.805 4.512 3.196 3.309 4.38-.71 4.987-2.746.608 2.036 1.307 5.91 4.93 2.746 2.72-2.746.747-4.143-1.747-4.512 1.702.189 3.55-.4 4.07-2.145.156-.528.397-3.691.397-4.13s-.088-1.186-.575-1.406c-.42-.19-1.06-.395-2.741.79-1.755 1.24-3.64 3.752-4.334 5.099"/></g>
+    <defs><clipPath id="bluesky-clip"><path fill="#fff" d="M.1.85h15.3v15.3H.1z"/></clipPath></defs>
+  </symbol>
+  <symbol id="discord-icon" viewBox="0 0 20 19">
+    <path fill="#08060d" d="M16.224 3.768a14.5 14.5 0 0 0-3.67-1.153c-.158.286-.343.67-.47.976a13.5 13.5 0 0 0-4.067 0c-.128-.306-.317-.69-.476-.976A14.4 14.4 0 0 0 3.868 3.77C1.546 7.28.916 10.703 1.231 14.077a14.7 14.7 0 0 0 4.5 2.306q.545-.748.965-1.587a9.5 9.5 0 0 1-1.518-.74q.191-.14.372-.293c2.927 1.369 6.107 1.369 8.999 0q.183.152.372.294-.723.437-1.52.74.418.838.963 1.588a14.6 14.6 0 0 0 4.504-2.308c.37-3.911-.63-7.302-2.644-10.309m-9.13 8.234c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.894 0 1.614.82 1.599 1.82.001 1-.705 1.82-1.6 1.82m5.91 0c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.893 0 1.614.82 1.599 1.82 0 1-.706 1.82-1.6 1.82"/>
+  </symbol>
+  <symbol id="documentation-icon" viewBox="0 0 21 20">
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="m15.5 13.333 1.533 1.322c.645.555.967.833.967 1.178s-.322.623-.967 1.179L15.5 18.333m-3.333-5-1.534 1.322c-.644.555-.966.833-.966 1.178s.322.623.966 1.179l1.534 1.321"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M17.167 10.836v-4.32c0-1.41 0-2.117-.224-2.68-.359-.906-1.118-1.621-2.08-1.96-.599-.21-1.349-.21-2.848-.21-2.623 0-3.935 0-4.983.369-1.684.591-3.013 1.842-3.641 3.428C3 6.449 3 7.684 3 10.154v2.122c0 2.558 0 3.838.706 4.726q.306.383.713.671c.76.536 1.79.64 3.581.66"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M3 10a2.78 2.78 0 0 1 2.778-2.778c.555 0 1.209.097 1.748-.047.48-.129.854-.503.982-.982.145-.54.048-1.194.048-1.749a2.78 2.78 0 0 1 2.777-2.777"/>
+  </symbol>
+  <symbol id="github-icon" viewBox="0 0 19 19">
+    <path fill="#08060d" fill-rule="evenodd" d="M9.356 1.85C5.05 1.85 1.57 5.356 1.57 9.694a7.84 7.84 0 0 0 5.324 7.44c.387.079.528-.168.528-.376 0-.182-.013-.805-.013-1.454-2.165.467-2.616-.935-2.616-.935-.349-.91-.864-1.143-.864-1.143-.71-.48.051-.48.051-.48.787.051 1.2.805 1.2.805.695 1.194 1.817.857 2.268.649.064-.507.27-.857.49-1.052-1.728-.182-3.545-.857-3.545-3.87 0-.857.31-1.558.8-2.104-.078-.195-.349-1 .077-2.078 0 0 .657-.208 2.14.805a7.5 7.5 0 0 1 1.946-.26c.657 0 1.328.092 1.946.26 1.483-1.013 2.14-.805 2.14-.805.426 1.078.155 1.883.078 2.078.502.546.799 1.247.799 2.104 0 3.013-1.818 3.675-3.558 3.87.284.247.528.714.528 1.454 0 1.052-.012 1.896-.012 2.156 0 .208.142.455.528.377a7.84 7.84 0 0 0 5.324-7.441c.013-4.338-3.48-7.844-7.773-7.844" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="social-icon" viewBox="0 0 20 20">
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M12.5 6.667a4.167 4.167 0 1 0-8.334 0 4.167 4.167 0 0 0 8.334 0"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M2.5 16.667a5.833 5.833 0 0 1 8.75-5.053m3.837.474.513 1.035c.07.144.257.282.414.309l.93.155c.596.1.736.536.307.965l-.723.73a.64.64 0 0 0-.152.531l.207.903c.164.715-.213.991-.84.618l-.872-.52a.63.63 0 0 0-.577 0l-.872.52c-.624.373-1.003.094-.84-.618l.207-.903a.64.64 0 0 0-.152-.532l-.723-.729c-.426-.43-.289-.864.306-.964l.93-.156a.64.64 0 0 0 .412-.31l.513-1.034c.28-.562.735-.562 1.012 0"/>
+  </symbol>
+  <symbol id="x-icon" viewBox="0 0 19 19">
+    <path fill="#08060d" fill-rule="evenodd" d="M1.893 1.98c.052.072 1.245 1.769 2.653 3.77l2.892 4.114c.183.261.333.48.333.486s-.068.089-.152.183l-.522.593-.765.867-3.597 4.087c-.375.426-.734.834-.798.905a1 1 0 0 0-.118.148c0 .01.236.017.664.017h.663l.729-.83c.4-.457.796-.906.879-.999a692 692 0 0 0 1.794-2.038c.034-.037.301-.34.594-.675l.551-.624.345-.392a7 7 0 0 1 .34-.374c.006 0 .93 1.306 2.052 2.903l2.084 2.965.045.063h2.275c1.87 0 2.273-.003 2.266-.021-.008-.02-1.098-1.572-3.894-5.547-2.013-2.862-2.28-3.246-2.273-3.266.008-.019.282-.332 2.085-2.38l2-2.274 1.567-1.782c.022-.028-.016-.03-.65-.03h-.674l-.3.342a871 871 0 0 1-1.782 2.025c-.067.075-.405.458-.75.852a100 100 0 0 1-.803.91c-.148.172-.299.344-.99 1.127-.304.343-.32.358-.345.327-.015-.019-.904-1.282-1.976-2.808L6.365 1.85H1.8zm1.782.91 8.078 11.294c.772 1.08 1.413 1.973 1.425 1.984.016.017.241.02 1.05.017l1.03-.004-2.694-3.766L7.796 5.75 5.722 2.852l-1.039-.004-1.039-.004z" clip-rule="evenodd"/>
+  </symbol>
+</svg>
+</file>
+
+<file path="README.md">
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+</file>
+
+<file path="src/App.css">
+
+</file>
+
+<file path="src/App.jsx">
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { FileArchive, RefreshCw, ChevronLeft, FileSpreadsheet } from 'lucide-react';
+import Home from './components/Home';
+import CompressImage from './components/CompressImage';
+import PdfToTxt from './components/PdfToTxt';
+import ExcelToTxtConverter from './components/ExcelToTxtConverter';
+import DocToTxt from './components/DocToTxt';
+import BackendToolShell from './components/BackendToolShell'; // Import Shell
+import OcrToTxt from './components/OcrToTxt'; // Import component
+import SplitPdf from './components/SplitPdf';
+// Nút Back to Home để dễ điều hướng
+const Layout = ({ children }) => (
+  <div className="min-h-screen bg-[#09090b] text-zinc-200">
+    <div className="max-w-7xl mx-auto p-4">
+      <Link to="/" className="inline-flex items-center text-sm text-zinc-400 hover:text-white transition-colors">
+        <ChevronLeft size={16} className="mr-1" /> Về trang chủ
+      </Link>
+    </div>
+    {children}
+  </div>
+);
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        
+        {/* Các tool Client-side (Hoạt động 100%) */}
+        <Route path="/compress-image" element={<Layout><CompressImage /></Layout>} />
+        <Route path="/pdf-to-txt" element={<Layout><PdfToTxt /></Layout>} />
+        <Route path="/excel-to-txt" element={<Layout><ExcelToTxtConverter /></Layout>} />
+        <Route path="/doc-to-txt" element={<Layout><DocToTxt /></Layout>} />
+        <Route path="/ocr-to-txt" element={<Layout><OcrToTxt /></Layout>} />
+        <Route path="/split-pdf" element={<Layout><SplitPdf /></Layout>} />
+        {/* Các tool Backend (Chờ Cloudflare) */}
+        <Route path="/compress-pdf" element={
+          <Layout>
+            <BackendToolShell 
+              title="Nén PDF" 
+              description="Tối ưu hoá dung lượng file PDF mà không làm nhòe chữ." 
+              accept=".pdf" 
+              icon={FileArchive} 
+              expectedAction="Compress PDF"
+            />
+          </Layout>
+        } />
+        
+        <Route path="/compress-doc" element={
+          <Layout>
+            <BackendToolShell 
+              title="Nén DOCX" 
+              description="Giảm kích thước tài liệu Word chứa nhiều hình ảnh." 
+              accept=".docx" 
+              icon={FileArchive} 
+              expectedAction="Compress DOCX"
+            />
+          </Layout>
+        } />
+
+        <Route path="/pdf-to-doc" element={
+          <Layout>
+            <BackendToolShell 
+              title="PDF sang DOCX" 
+              description="Chuyển đổi PDF sang Word giữ nguyên định dạng để dễ dàng chỉnh sửa." 
+              accept=".pdf" 
+              icon={RefreshCw} 
+              expectedAction="Convert PDF to DOCX"
+            />
+          </Layout>
+        } />
+
+        <Route path="/doc-to-pdf" element={
+          <Layout>
+            <BackendToolShell 
+              title="DOCX sang PDF" 
+              description="Xuất file Word sang định dạng PDF chuẩn để in ấn." 
+              accept=".docx" 
+              icon={RefreshCw} 
+              expectedAction="Convert DOCX to PDF"
+            />
+          </Layout>
+        } />
+        <Route path="/excel-to-pdf" element={
+          <Layout>
+            <BackendToolShell 
+              title="Excel sang PDF" 
+              description="Chuyển đổi bảng tính Excel (.xlsx, .xls) sang định dạng PDF giữ nguyên cột, hàng và màu sắc." 
+              accept=".xlsx, .xls" 
+              icon={FileSpreadsheet} 
+              expectedAction="Convert Excel to PDF"
+            />
+          </Layout>
+        } />
+
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+</file>
+
+<file path="src/assets/react.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
+</file>
+
+<file path="src/assets/vite.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
+</file>
+
+<file path="src/components/BackendToolShell.jsx">
+import React, { useState } from 'react';
+import { UploadCloud, File, Download, Loader2, ServerCog, CheckCircle2 } from 'lucide-react';
+
+const BackendToolShell = ({ title, description, accept, icon: Icon, expectedAction }) => {
+  const [file, setFile] = useState(null);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [downloadUrl, setDownloadUrl] = useState(null);
+  const [resultFileName, setResultFileName] = useState("");
+
+  const API_URL = "https://file-forge-backend.file-forge-api.workers.dev/process";
+
+  const handleFileUpload = (event) => {
+    const selectedFile = event.target.files[0];
+    if (selectedFile) {
+      setFile(selectedFile);
+      setDownloadUrl(null);
+      setResultFileName("");
+    }
+  };
+
+  const handleProcess = async () => {
+    if (!file) return;
+    setIsProcessing(true);
+
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("action", expectedAction);
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setDownloadUrl(data.downloadUrl);
+        setResultFileName(data.fileName);
+      } else {
+        alert("Lỗi: " + (data.error || "Không thể xử lý file"));
+      }
+    } catch (error) {
+      alert("Lỗi kết nối máy chủ. Vui lòng kiểm tra lại Cloudflare Worker.");
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  return (
+    <div className="max-w-3xl mx-auto px-6 py-16 animate-in fade-in duration-700">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-white mb-3 tracking-tighter">{title}</h2>
+        <p className="text-zinc-400">{description}</p>
+        <div className="mt-6 flex justify-center">
+          <span className="flex items-center gap-2 px-3 py-1 bg-zinc-800 border border-zinc-700 rounded-full text-[10px] uppercase tracking-widest text-zinc-500">
+            <ServerCog size={12} /> Secure Cloud Processing
+          </span>
+        </div>
+      </div>
+
+      <div className="relative group">
+        <input 
+          type="file" 
+          accept={accept} 
+          onChange={handleFileUpload} 
+          className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" 
+        />
+        <div className="flex flex-col items-center justify-center p-20 border-2 border-dashed border-zinc-800 rounded-[2rem] bg-zinc-900/20 group-hover:bg-zinc-800/30 group-hover:border-zinc-600 transition-all duration-500">
+          <Icon className="w-16 h-16 text-zinc-700 group-hover:text-zinc-400 mb-6 transition-transform group-hover:scale-110 duration-500" />
+          <p className="text-zinc-400 font-medium">
+            {file ? "Đã chọn 1 tệp tin" : "Kéo thả hoặc chọn tệp tin của bạn"}
+          </p>
+        </div>
+      </div>
+
+      {file && !downloadUrl && (
+        <div className="mt-8 space-y-4">
+          <div className="flex items-center justify-between p-4 bg-zinc-900/50 border border-zinc-800 rounded-2xl">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-zinc-800 rounded-xl text-zinc-500"><File size={20} /></div>
+              <span className="text-zinc-200 text-sm font-medium truncate max-w-[200px]">{file.name}</span>
+            </div>
+            <span className="text-xs text-zinc-600">Sẵn sàng</span>
+          </div>
+          
+          <button 
+            onClick={handleProcess} 
+            disabled={isProcessing}
+            className="w-full flex items-center justify-center gap-3 py-5 bg-zinc-100 text-zinc-950 font-black text-sm uppercase tracking-widest rounded-2xl hover:bg-white disabled:opacity-30 transition-all active:scale-[0.98]"
+          >
+            {isProcessing ? (
+              <><Loader2 className="animate-spin w-5 h-5" /> Đang tối ưu hóa...</>
+            ) : (
+              'Bắt đầu chuyển đổi'
+            )}
+          </button>
+        </div>
+      )}
+
+      {downloadUrl && (
+        <div className="mt-8 space-y-4 animate-in slide-in-from-bottom-4 duration-500">
+          <div className="p-6 bg-zinc-900/80 border border-zinc-800 rounded-[2rem] text-center">
+            <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto mb-4" />
+            <h4 className="text-white font-bold mb-1 text-lg">Xử lý thành công!</h4>
+            <p className="text-zinc-500 text-sm mb-6 italic">{resultFileName}</p>
+            
+            <a 
+              href={downloadUrl} 
+              download={resultFileName}
+              className="flex items-center justify-center gap-3 py-5 bg-emerald-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl hover:bg-emerald-500 transition-all shadow-xl shadow-emerald-900/20"
+            >
+              <Download size={18} /> Tải xuống bản lưu trữ
+            </a>
+          </div>
+          
+          <button 
+            onClick={() => {setFile(null); setDownloadUrl(null);}}
+            className="w-full text-zinc-600 text-xs hover:text-zinc-400 transition-colors uppercase tracking-widest font-bold py-4"
+          >
+            Thực hiện tệp tin mới
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default BackendToolShell;
+</file>
+
+<file path="src/components/CompressImage.jsx">
+import React, { useState } from 'react';
+import imageCompression from 'browser-image-compression';
+import { UploadCloud, Download, ImageIcon, Loader2 } from 'lucide-react';
+
+const CompressImage = () => {
+  const [originalFile, setOriginalFile] = useState(null);
+  const [compressedFile, setCompressedFile] = useState(null);
+  const [isCompressing, setIsCompressing] = useState(false);
+  const [compressionRatio, setCompressionRatio] = useState(0);
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setOriginalFile(file);
+      setCompressedFile(null);
+      setCompressionRatio(0);
+    }
+  };
+
+  const handleCompress = async () => {
+    if (!originalFile) return;
+    setIsCompressing(true);
+    const options = { maxSizeMB: 1, maxWidthOrHeight: 1920, useWebWorker: true };
+
+    try {
+      const compressedBlob = await imageCompression(originalFile, options);
+      const file = new File([compressedBlob], `compressed_${originalFile.name}`, { type: compressedBlob.type });
+      setCompressedFile(file);
+      setCompressionRatio(((1 - (compressedBlob.size / originalFile.size)) * 100).toFixed(1));
+    } catch (error) {
+      alert("Đã xảy ra lỗi khi nén ảnh!");
+    } finally {
+      setIsCompressing(false);
+    }
+  };
+
+  const formatBytes = (bytes) => {
+    if (!+bytes) return '0 Bytes';
+    const k = 1024, sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return `${parseFloat((bytes / Math.pow(k, i)).toFixed(2))} ${sizes[i]}`;
+  };
+
+  return (
+    <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-white mb-3">Nén Ảnh Cinematic</h2>
+        <p className="text-zinc-400">Giảm dung lượng nhưng vẫn giữ được chi tiết và màu sắc tốt nhất.</p>
+      </div>
+
+      <div className="relative group cursor-pointer">
+        <input type="file" accept="image/*" onChange={handleImageUpload} className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" />
+        <div className="flex flex-col items-center justify-center p-16 border-2 border-dashed border-zinc-700 rounded-3xl bg-zinc-900/30 group-hover:bg-zinc-800/50 group-hover:border-zinc-500 transition-all">
+          <UploadCloud className="w-12 h-12 text-zinc-500 group-hover:text-zinc-300 mb-4 transition-colors" />
+          <span className="text-zinc-300 font-medium">Nhấp hoặc kéo thả ảnh vào đây</span>
+          <span className="text-sm text-zinc-500 mt-2">Hỗ trợ JPG, PNG, WEBP</span>
+        </div>
+      </div>
+
+      {originalFile && (
+        <div className="mt-8 space-y-6">
+          <div className="flex items-center gap-4 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl">
+            <div className="p-3 bg-zinc-800 rounded-xl text-zinc-400"><ImageIcon size={24} /></div>
+            <div className="flex-1">
+              <p className="text-zinc-200 font-medium truncate">{originalFile.name}</p>
+              <p className="text-sm text-zinc-500">Bản gốc: {formatBytes(originalFile.size)}</p>
+            </div>
+          </div>
+
+          <button 
+            onClick={handleCompress} disabled={isCompressing || compressedFile}
+            className="w-full flex items-center justify-center gap-2 py-4 bg-white text-black font-semibold rounded-xl hover:bg-zinc-200 disabled:opacity-50 transition-colors"
+          >
+            {isCompressing ? <><Loader2 className="animate-spin w-5 h-5" /> Đang xử lý...</> : 'Bắt đầu nén ảnh'}
+          </button>
+        </div>
+      )}
+
+      {compressedFile && (
+        <div className="mt-8 p-6 bg-emerald-950/30 border border-emerald-900/50 rounded-2xl space-y-6">
+          <div className="text-center text-emerald-400 font-medium">✨ Đã nén thành công! (Giảm {compressionRatio}%)</div>
+          
+          <div className="flex items-center gap-4 p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl">
+            <div className="p-3 bg-emerald-900/50 text-emerald-400 rounded-xl"><Download size={24} /></div>
+            <div className="flex-1">
+              <p className="text-emerald-100 font-medium truncate">{compressedFile.name}</p>
+              <p className="text-sm text-emerald-500/80">Đã nén: {formatBytes(compressedFile.size)}</p>
+            </div>
+          </div>
+          
+          <a href={URL.createObjectURL(compressedFile)} download={compressedFile.name} className="w-full flex items-center justify-center py-4 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-500 transition-colors">
+            Tải ảnh về máy
+          </a>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default CompressImage;
+</file>
+
+<file path="src/components/DocToTxt.jsx">
+import React, { useState } from 'react';
+import * as mammoth from 'mammoth';
+import { UploadCloud, FileText, Download, Loader2, FileType2 } from 'lucide-react';
+
+const DocToTxt = () => {
+  const [file, setFile] = useState(null);
+  const [extractedText, setExtractedText] = useState('');
+  const [isExtracting, setIsExtracting] = useState(false);
+
+  const handleFileUpload = (event) => {
+    const selectedFile = event.target.files[0];
+    if (selectedFile && (selectedFile.name.endsWith('.docx') || selectedFile.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')) {
+      setFile(selectedFile);
+      setExtractedText('');
+    } else {
+      alert("Vui lòng chọn đúng định dạng file .DOCX!");
+    }
+  };
+
+  const extractTextFromDocx = async () => {
+    if (!file) return;
+    setIsExtracting(true);
+
+    try {
+      const arrayBuffer = await file.arrayBuffer();
+      // mammoth trích xuất văn bản thô cực nhanh
+      const result = await mammoth.extractRawText({ arrayBuffer });
+      setExtractedText(result.value);
+    } catch (error) {
+      console.error("Lỗi khi đọc file Word:", error);
+      alert("Không thể đọc file DOCX này. Vui lòng kiểm tra lại file.");
+    } finally {
+      setIsExtracting(false);
+    }
+  };
+
+  const handleDownloadTxt = () => {
+    if (!extractedText) return;
+    const url = URL.createObjectURL(new Blob([extractedText], { type: 'text/plain;charset=utf-8' }));
+    const link = Object.assign(document.createElement('a'), { href: url, download: `${file.name.replace('.docx', '')}.txt` });
+    document.body.appendChild(link); link.click(); link.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  return (
+    <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-white mb-3">DOCX sang TXT</h2>
+        <p className="text-zinc-400">Trích xuất toàn bộ văn bản từ tài liệu Word một cách nhanh chóng.</p>
+      </div>
+
+      <div className="relative group cursor-pointer mb-8">
+        <input type="file" accept=".docx" onChange={handleFileUpload} className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" />
+        <div className="flex flex-col items-center justify-center p-16 border-2 border-dashed border-zinc-700 rounded-3xl bg-zinc-900/30 group-hover:bg-zinc-800/50 group-hover:border-zinc-500 transition-all">
+          <FileType2 className="w-12 h-12 text-zinc-500 group-hover:text-zinc-300 mb-4 transition-colors" />
+          <span className="text-zinc-300 font-medium">Nhấp hoặc kéo thả file DOCX vào đây</span>
+        </div>
+      </div>
+
+      {file && !extractedText && (
+        <div className="space-y-6">
+          <div className="flex items-center gap-4 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl">
+            <div className="p-3 bg-zinc-800 rounded-xl text-zinc-400"><FileText size={24} /></div>
+            <div className="flex-1"><p className="text-zinc-200 font-medium">{file.name}</p></div>
+          </div>
+          <button 
+            onClick={extractTextFromDocx} disabled={isExtracting}
+            className="w-full flex items-center justify-center gap-2 py-4 bg-white text-black font-semibold rounded-xl hover:bg-zinc-200 disabled:opacity-50 transition-colors"
+          >
+            {isExtracting ? <><Loader2 className="animate-spin w-5 h-5" /> Đang trích xuất...</> : 'Bắt đầu lấy chữ'}
+          </button>
+        </div>
+      )}
+
+      {extractedText && (
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="p-4 bg-emerald-950/30 border border-emerald-900/50 text-emerald-400 rounded-xl text-center font-medium">
+            ✨ Trích xuất hoàn tất!
+          </div>
+          <textarea 
+            value={extractedText} readOnly
+            className="w-full h-64 p-5 bg-zinc-900 border border-zinc-700 rounded-2xl text-zinc-300 font-mono text-sm leading-relaxed focus:outline-none focus:border-zinc-500 resize-y"
+          />
+          <button onClick={handleDownloadTxt} className="w-full flex items-center justify-center gap-2 py-4 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-500 transition-colors">
+            <Download size={20} /> Tải file .TXT
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default DocToTxt;
+</file>
+
+<file path="src/components/ExcelToTxtConverter.jsx">
+import React, { useState } from 'react';
+import * as XLSX from 'xlsx';
+import { UploadCloud, FileSpreadsheet, Loader2, FileDown, CheckCircle } from 'lucide-react';
+
+const ExcelToTxtConverter = () => {
+  const [files, setFiles] = useState([]);
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  // Xử lý khi chọn nhiều file
+  const handleFileChange = (e) => {
+    const selectedFiles = Array.from(e.target.files);
+    setFiles(selectedFiles);
+  };
+
+  // Hàm phụ trợ đọc file dùng Promise
+  const readFileAsArrayBuffer = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (e) => resolve({ fileName: file.name, data: e.target.result });
+      reader.onerror = (err) => reject(err);
+      reader.readAsArrayBuffer(file);
+    });
+  };
+
+  const handleConvertAndMerge = async () => {
+    if (files.length === 0) {
+      alert('Vui lòng chọn ít nhất một file Excel!');
+      return;
+    }
+
+    setIsProcessing(true);
+    let combinedText = "";
+
+    try {
+      for (const file of files) {
+        const { fileName, data } = await readFileAsArrayBuffer(file);
+        const workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+
+        // Ghi chú tên file vào trong nội dung TXT để dễ phân biệt
+        combinedText += `=== START OF FILE: ${fileName} ===\n`;
+
+        // Duyệt qua tất cả các sheet trong mỗi file
+        workbook.SheetNames.forEach((sheetName) => {
+          const worksheet = workbook.Sheets[sheetName];
+          const txtData = XLSX.utils.sheet_to_csv(worksheet, { FS: '\t' });
+          combinedText += `--- Sheet: ${sheetName} ---\n`;
+          combinedText += txtData + "\n\n";
+        });
+
+        combinedText += `=== END OF FILE: ${fileName} ===\n\n`;
+      }
+
+      // Tạo và tải file TXT tổng hợp
+      const blob = new Blob([combinedText], { type: 'text/plain;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', `merged_data_${new Date().getTime()}.txt`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+
+    } catch (error) {
+      console.error("Lỗi khi xử lý file:", error);
+      alert("Có lỗi xảy ra trong quá trình chuyển đổi.");
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  return (
+    <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-white mb-3">Excel sang TXT</h2>
+        <p className="text-zinc-400">Gộp và trích xuất dữ liệu từ nhiều file bảng tính sang văn bản thô.</p>
+      </div>
+      
+      {/* Khu vực Upload (Dropzone) */}
+      <div className="relative group cursor-pointer mb-8">
+        <input 
+          type="file" 
+          accept=".xlsx, .xls" 
+          multiple
+          onChange={handleFileChange} 
+          className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+        />
+        <div className="flex flex-col items-center justify-center p-16 border-2 border-dashed border-zinc-700 rounded-3xl bg-zinc-900/30 group-hover:bg-zinc-800/50 group-hover:border-zinc-500 transition-all">
+          <UploadCloud className="w-12 h-12 text-zinc-500 group-hover:text-zinc-300 mb-4 transition-colors" />
+          <span className="text-zinc-300 font-medium">
+            {files.length > 0 ? `Đã chọn ${files.length} file` : "Nhấp hoặc kéo thả tối đa 50 file Excel vào đây"}
+          </span>
+          <span className="text-sm text-zinc-500 mt-2">Hỗ trợ .XLSX, .XLS</span>
+        </div>
+      </div>
+
+      {/* Hiển thị danh sách file & Nút xử lý */}
+      {files.length > 0 && (
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="p-5 bg-zinc-900 border border-zinc-800 rounded-2xl">
+            <h3 className="text-zinc-200 font-medium mb-4 flex items-center gap-2">
+              <FileSpreadsheet size={20} className="text-emerald-500" />
+              Danh sách file chờ gộp:
+            </h3>
+            
+            <ul className="space-y-2">
+              {files.slice(0, 5).map((f, i) => (
+                <li key={i} className="flex items-center gap-3 p-3 bg-zinc-800/50 rounded-xl text-sm text-zinc-300">
+                  <CheckCircle size={16} className="text-emerald-500" />
+                  <span className="truncate">{f.name}</span>
+                </li>
+              ))}
+              {files.length > 5 && (
+                <li className="text-sm text-zinc-500 italic pl-2 pt-2">
+                  ... và {files.length - 5} file khác
+                </li>
+              )}
+            </ul>
+          </div>
+
+          <button 
+            onClick={handleConvertAndMerge}
+            disabled={isProcessing}
+            className="w-full flex items-center justify-center gap-2 py-4 bg-white text-black font-semibold rounded-xl hover:bg-zinc-200 disabled:opacity-50 transition-colors"
+          >
+            {isProcessing ? (
+              <><Loader2 className="animate-spin w-5 h-5" /> Đang xử lý...</>
+            ) : (
+              <><FileDown size={20} /> Gộp {files.length} file & Tải về .TXT</>
+            )}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ExcelToTxtConverter;
+</file>
+
+<file path="src/components/Home.jsx">
+import React from 'react';
+import { Link } from 'react-router-dom';
+// Thêm Scissors vào danh sách import dưới đây
+import { 
+  FileText, FileArchive, Image as ImageIcon, 
+  RefreshCw, FileSpreadsheet, FileDown, ScanText, Scissors 
+} from 'lucide-react';
+
+const tools = [
+  { id: 'compress-img', name: 'Nén Ảnh', icon: <ImageIcon size={28} />, path: '/compress-image', desc: 'Giảm dung lượng ảnh không giảm chất lượng.' },
+  { id: 'compress-pdf', name: 'Nén PDF', icon: <FileArchive size={28} />, path: '/compress-pdf', desc: 'Tối ưu hoá dung lượng file PDF.' },
+  { id: 'compress-doc', name: 'Nén DOCX', icon: <FileArchive size={28} />, path: '/compress-doc', desc: 'Giảm kích thước tài liệu Word.' },
+  { id: 'pdf-to-doc', name: 'PDF sang DOCX', icon: <RefreshCw size={28} />, path: '/pdf-to-doc', desc: 'Chuyển đổi PDF sang Word có thể chỉnh sửa.' },
+  { id: 'doc-to-pdf', name: 'DOCX sang PDF', icon: <RefreshCw size={28} />, path: '/doc-to-pdf', desc: 'Chuyển đổi Word sang PDF giữ nguyên định dạng.' },
+  { id: 'split-pdf', name: 'Cắt PDF', icon: <Scissors size={28} />, path: '/split-pdf', desc: 'Trích xuất các trang cần thiết từ file PDF lớn.' },
+  { id: 'excel-to-pdf', name: 'Excel sang PDF', icon: <FileSpreadsheet size={28} />, path: '/excel-to-pdf', desc: 'Xuất bảng tính Excel sang PDF để chia sẻ và in ấn.' },
+  { id: 'ocr-to-txt', name: 'Ảnh Scan sang TXT', icon: <ScanText size={28} />, path: '/ocr-to-txt', desc: 'Dùng AI đọc và trích xuất chữ từ ảnh chụp tài liệu (OCR).' },
+  { id: 'excel-to-txt', name: 'Excel sang TXT', icon: <FileSpreadsheet size={28} />, path: '/excel-to-txt', desc: 'Trích xuất dữ liệu bảng tính sang văn bản thô.' },
+  { id: 'doc-to-txt', name: 'DOCX sang TXT', icon: <FileText size={28} />, path: '/doc-to-txt', desc: 'Lấy nội dung chữ từ file Word.' },
+  { id: 'pdf-to-txt', name: 'PDF sang TXT', icon: <FileDown size={28} />, path: '/pdf-to-txt', desc: 'Trích xuất văn bản từ tài liệu PDF.' },
+];
+
+const Home = () => {
+  return (
+    <div className="max-w-7xl mx-auto px-6 py-20 min-h-screen">
+      <header className="text-center mb-16 space-y-4">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">
+          File Forge
+        </h1>
+        <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto">
+          Bộ công cụ xử lý định dạng đa năng, bảo mật và tốc độ cao.
+        </p>
+      </header>
+
+      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {tools.map((tool) => (
+          <Link 
+            to={tool.path} 
+            key={tool.id} 
+            className="group flex flex-col p-6 bg-zinc-900/40 border border-zinc-800 rounded-2xl hover:bg-zinc-800/80 hover:border-zinc-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-zinc-900/50 transition-all duration-300"
+          >
+            <div className="p-3 bg-zinc-800 text-zinc-300 rounded-xl mb-5 w-fit group-hover:text-white transition-colors">
+              {tool.icon}
+            </div>
+            <h3 className="text-xl font-semibold text-zinc-100 mb-2">{tool.name}</h3>
+            <p className="text-sm text-zinc-400 leading-relaxed">{tool.desc}</p>
+          </Link>
+        ))}
+      </main>
+    </div>
+  );
+};
+
+export default Home;
+</file>
+
+<file path="src/components/OcrToTxt.jsx">
+import React, { useState, useEffect } from 'react';
+import Tesseract from 'tesseract.js';
+import { UploadCloud, ScanText, Download, Loader2, FileImage, Sparkles, BrainCircuit } from 'lucide-react';
+
+const OcrToTxt = () => {
+  const [file, setFile] = useState(null);
+  const [previewUrl, setPreviewUrl] = useState(null);
+  
+  // State cho phần trích xuất chữ (OCR)
+  const [extractedText, setExtractedText] = useState('');
+  const [isExtracting, setIsExtracting] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [statusText, setStatusText] = useState('');
+
+  // State cho phần Tóm tắt AI
+  const [isSummarizing, setIsSummarizing] = useState(false);
+  const [summaryText, setSummaryText] = useState('');
+
+  // Dọn dẹp URL preview khi component unmount
+  useEffect(() => {
+    return () => { if (previewUrl) URL.revokeObjectURL(previewUrl); };
+  }, [previewUrl]);
+
+  const handleFileUpload = (event) => {
+    const selectedFile = event.target.files[0];
+    if (selectedFile && selectedFile.type.startsWith('image/')) {
+      setFile(selectedFile);
+      setPreviewUrl(URL.createObjectURL(selectedFile));
+      setExtractedText('');
+      setSummaryText('');
+      setProgress(0);
+    } else {
+      alert("Vui lòng chọn file hình ảnh (JPG, PNG, WEBP)!");
+    }
+  };
+
+  const extractTextWithOcr = async () => {
+    if (!file) return;
+    setIsExtracting(true);
+    setProgress(0);
+    setStatusText('Đang khởi tạo AI Nhận diện...');
+
+    try {
+      // Chạy Tesseract nhận diện Tiếng Việt + Tiếng Anh
+      const result = await Tesseract.recognize(
+        file,
+        'vie+eng',
+        {
+          logger: (m) => {
+            if (m.status === 'recognizing text') {
+              setStatusText('Đang quét từng dòng chữ...');
+              setProgress(Math.round(m.progress * 100));
+            } else {
+              setStatusText('Đang tải dữ liệu ngôn ngữ (chỉ tốn lần đầu)...');
+            }
+          }
+        }
+      );
+      
+      setExtractedText(result.data.text);
+    } catch (error) {
+      console.error("Lỗi OCR:", error);
+      alert("Không thể đọc được chữ từ ảnh này. Vui lòng thử ảnh nét hơn.");
+    } finally {
+      setIsExtracting(false);
+    }
+  };
+
+  const handleAiSummarize = () => {
+    if (!extractedText) return;
+    setIsSummarizing(true);
+
+    // TODO: Cắm API AI của bạn vào đây (Ví dụ: Fetch tới Cloudflare Worker gọi Llama-3 hoặc Gemini API)
+    // Tạm thời giả lập AI đang đọc và tóm tắt mất 3 giây
+    setTimeout(() => {
+      setSummaryText(
+        "✨ [Bản tóm tắt do AI tạo ra]\n\n" +
+        "Tài liệu này đề cập đến các vấn đề chính sau:\n" +
+        "- Điểm chính thứ nhất được AI phân tích từ nội dung ảnh.\n" +
+        "- Điểm chính thứ hai giúp người đọc nắm bắt nhanh thông tin.\n" +
+        "- Kết luận hoặc yêu cầu hành động có trong văn bản.\n\n" +
+        "(Lưu ý: Đây là UI Demo, bạn cần kết nối API LLM thật vào hàm handleAiSummarize để AI hoạt động)"
+      );
+      setIsSummarizing(false);
+    }, 3000);
+  };
+
+  const handleDownloadTxt = (content, suffix) => {
+    if (!content) return;
+    const url = URL.createObjectURL(new Blob([content], { type: 'text/plain;charset=utf-8' }));
+    const link = Object.assign(document.createElement('a'), { href: url, download: `${file.name}_${suffix}.txt` });
+    document.body.appendChild(link); link.click(); link.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  return (
+    <div className="max-w-4xl mx-auto px-6 py-16">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-white mb-3">Trích xuất chữ từ Ảnh (OCR)</h2>
+        <p className="text-zinc-400">Dùng công nghệ thị giác máy tính để đọc chữ từ ảnh chụp tài liệu, sách báo, hóa đơn.</p>
+      </div>
+
+      <div className="relative group cursor-pointer mb-8">
+        <input type="file" accept="image/jpeg, image/png, image/webp" onChange={handleFileUpload} className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" />
+        <div className="flex flex-col items-center justify-center p-16 border-2 border-dashed border-zinc-700 rounded-3xl bg-zinc-900/30 group-hover:bg-zinc-800/50 group-hover:border-zinc-500 transition-all">
+          <ScanText className="w-12 h-12 text-zinc-500 group-hover:text-zinc-300 mb-4 transition-colors" />
+          <span className="text-zinc-300 font-medium">Nhấp hoặc kéo thả Ảnh (JPG, PNG) vào đây</span>
+        </div>
+      </div>
+
+      {file && !extractedText && (
+        <div className="space-y-6">
+          <div className="flex items-center gap-4 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl">
+            <div className="w-16 h-16 rounded-lg overflow-hidden bg-zinc-800 shrink-0">
+              <img src={previewUrl} alt="Preview" className="w-full h-full object-cover opacity-80" />
+            </div>
+            <div className="flex-1">
+              <p className="text-zinc-200 font-medium">{file.name}</p>
+              <p className="text-sm text-zinc-500">Sẵn sàng phân tích</p>
+            </div>
+          </div>
+          
+          <button 
+            onClick={extractTextWithOcr} disabled={isExtracting}
+            className="w-full flex items-center justify-center gap-2 py-4 bg-white text-black font-semibold rounded-xl hover:bg-zinc-200 disabled:opacity-50 transition-colors"
+          >
+            {isExtracting ? (
+              <><Loader2 className="animate-spin w-5 h-5" /> {statusText} {progress > 0 && `${progress}%`}</>
+            ) : (
+              <><ScanText size={20} /> Quét chữ ngay</>
+            )}
+          </button>
+        </div>
+      )}
+
+      {/* KHU VỰC KẾT QUẢ VÀ TÓM TẮT AI */}
+      {extractedText && (
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 animate-in fade-in duration-500">
+          
+          {/* Cột 1: Chữ gốc */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-medium text-white flex items-center gap-2">
+              <FileImage className="text-emerald-400" size={20} /> Văn bản gốc
+            </h3>
+            <textarea 
+              value={extractedText} 
+              onChange={(e) => setExtractedText(e.target.value)} // Cho phép sửa lỗi chính tả
+              className="w-full h-80 p-5 bg-zinc-900 border border-zinc-700 rounded-2xl text-zinc-300 font-sans text-sm leading-relaxed focus:outline-none focus:border-zinc-500 resize-none"
+            />
+            <div className="flex gap-3">
+              <button onClick={() => handleDownloadTxt(extractedText, 'goc')} className="flex-1 py-3 bg-zinc-800 text-zinc-300 font-medium rounded-xl hover:bg-zinc-700 transition-colors flex justify-center items-center gap-2">
+                <Download size={18} /> Lưu TXT
+              </button>
+              
+              {/* NÚT KÍCH HOẠT AI */}
+              <button 
+                onClick={handleAiSummarize} 
+                disabled={isSummarizing || summaryText}
+                className="flex-[2] py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium rounded-xl hover:from-purple-500 hover:to-indigo-500 disabled:opacity-50 transition-all flex justify-center items-center gap-2 shadow-lg shadow-purple-900/20"
+              >
+                {isSummarizing ? <><Loader2 className="animate-spin w-5 h-5" /> AI đang đọc...</> : <><BrainCircuit size={18} /> Tóm tắt bằng AI</>}
+              </button>
+            </div>
+          </div>
+
+          {/* Cột 2: Bản tóm tắt AI (Chỉ hiện khi đã bấm nút) */}
+          <div className={`space-y-4 transition-opacity duration-500 ${summaryText || isSummarizing ? 'opacity-100' : 'opacity-0 pointer-events-none hidden lg:block'}`}>
+            <h3 className="text-lg font-medium text-white flex items-center gap-2">
+              <Sparkles className="text-purple-400" size={20} /> AI Tóm tắt
+            </h3>
+            <textarea 
+              value={summaryText} readOnly
+              placeholder={isSummarizing ? "AI đang phân tích các ý chính..." : ""}
+              className="w-full h-80 p-5 bg-purple-950/20 border border-purple-900/50 rounded-2xl text-purple-100 font-sans text-sm leading-relaxed focus:outline-none resize-none"
+            />
+            {summaryText && (
+              <button onClick={() => handleDownloadTxt(summaryText, 'tom_tat')} className="w-full py-3 bg-purple-600/20 text-purple-300 border border-purple-500/30 font-medium rounded-xl hover:bg-purple-600/40 transition-colors flex justify-center items-center gap-2">
+                <Download size={18} /> Lưu bản tóm tắt
+              </button>
+            )}
+          </div>
+
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default OcrToTxt;
+</file>
+
+<file path="src/components/PdfToTxt.jsx">
+import React, { useState } from 'react';
+import * as pdfjsLib from 'pdfjs-dist';
+import { UploadCloud, FileText, Download, Loader2, FileDown } from 'lucide-react';
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
+
+const PdfToTxt = () => {
+  const [file, setFile] = useState(null);
+  const [extractedText, setExtractedText] = useState('');
+  const [isExtracting, setIsExtracting] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  const handleFileUpload = (event) => {
+    const selectedFile = event.target.files[0];
+    if (selectedFile?.type === 'application/pdf') {
+      setFile(selectedFile); setExtractedText(''); setProgress(0);
+    } else {
+      alert("Vui lòng chọn đúng file PDF!");
+    }
+  };
+
+  const extractTextFromPdf = async () => {
+    if (!file) return;
+    setIsExtracting(true); setProgress(0);
+    try {
+      const arrayBuffer = await file.arrayBuffer();
+      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      let fullText = '';
+      for (let i = 1; i <= pdf.numPages; i++) {
+        const page = await pdf.getPage(i);
+        const textContent = await page.getTextContent();
+        fullText += `--- Trang ${i} ---\n` + textContent.items.map(item => item.str).join(' ') + '\n\n';
+        setProgress(Math.round((i / pdf.numPages) * 100));
+      }
+      setExtractedText(fullText);
+    } catch (error) {
+      alert("File PDF này không thể trích xuất chữ.");
+    } finally {
+      setIsExtracting(false);
+    }
+  };
+
+  const handleDownloadTxt = () => {
+    if (!extractedText) return;
+    const url = URL.createObjectURL(new Blob([extractedText], { type: 'text/plain;charset=utf-8' }));
+    const link = Object.assign(document.createElement('a'), { href: url, download: `${file.name}.txt` });
+    document.body.appendChild(link); link.click(); link.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  return (
+    <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-white mb-3">PDF sang TXT</h2>
+        <p className="text-zinc-400">Trích xuất văn bản từ tài liệu PDF siêu tốc ngay trên trình duyệt.</p>
+      </div>
+
+      <div className="relative group cursor-pointer mb-8">
+        <input type="file" accept=".pdf" onChange={handleFileUpload} className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" />
+        <div className="flex flex-col items-center justify-center p-16 border-2 border-dashed border-zinc-700 rounded-3xl bg-zinc-900/30 group-hover:bg-zinc-800/50 group-hover:border-zinc-500 transition-all">
+          <FileDown className="w-12 h-12 text-zinc-500 group-hover:text-zinc-300 mb-4 transition-colors" />
+          <span className="text-zinc-300 font-medium">Kéo thả file PDF vào đây</span>
+        </div>
+      </div>
+
+      {file && !extractedText && (
+        <div className="space-y-6">
+          <div className="flex items-center gap-4 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl">
+            <div className="p-3 bg-zinc-800 rounded-xl text-zinc-400"><FileText size={24} /></div>
+            <div className="flex-1"><p className="text-zinc-200 font-medium">{file.name}</p></div>
+          </div>
+          <button 
+            onClick={extractTextFromPdf} disabled={isExtracting}
+            className="w-full flex items-center justify-center gap-2 py-4 bg-white text-black font-semibold rounded-xl hover:bg-zinc-200 disabled:opacity-50 transition-colors"
+          >
+            {isExtracting ? <><Loader2 className="animate-spin w-5 h-5" /> Đang quét trang... {progress}%</> : 'Bắt đầu trích xuất'}
+          </button>
+        </div>
+      )}
+
+      {extractedText && (
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="p-4 bg-emerald-950/30 border border-emerald-900/50 text-emerald-400 rounded-xl text-center font-medium">
+            ✨ Trích xuất hoàn tất!
+          </div>
+          <textarea 
+            value={extractedText} readOnly
+            className="w-full h-64 p-5 bg-zinc-900 border border-zinc-700 rounded-2xl text-zinc-300 font-mono text-sm leading-relaxed focus:outline-none focus:border-zinc-500 resize-y"
+          />
+          <button onClick={handleDownloadTxt} className="w-full flex items-center justify-center gap-2 py-4 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-500 transition-colors">
+            <Download size={20} /> Tải file .TXT
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default PdfToTxt;
+</file>
+
+<file path="src/components/SplitPdf.jsx">
+import React, { useState, useCallback } from 'react';
+import { Scissors, UploadCloud, Loader2, Download, FileDigit, CheckCircle2, RefreshCcw, AlertCircle, FileText } from 'lucide-react';
+
+const SplitPdf = () => {
+  const [file, setFile] = useState(null);
+  const [pages, setPages] = useState("1-2");
+  const [status, setStatus] = useState(""); // "", "uploading", "processing", "done", "error"
+  const [errorMessage, setErrorMessage] = useState("");
+  const [downloadUrl, setDownloadUrl] = useState(null);
+  const [resultFileName, setResultFileName] = useState("");
+
+  const API_URL = "https://file-forge-backend.file-forge-api.workers.dev";
+
+  const handleProcess = async () => {
+    if (!file) return;
+    setStatus("uploading");
+    setErrorMessage("");
+    setDownloadUrl(null);
+
+    try {
+      // BƯỚC 1: Lấy Presigned URL (Sử dụng cấu hình Path-Style từ Backend mới)
+      const resUrl = await fetch(`${API_URL}/get-presigned-url`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fileName: file.name, contentType: file.type })
+      });
+      
+      if (!resUrl.ok) throw new Error("Máy chủ không thể khởi tạo phiên tải lên.");
+      const { signedUrl, fileKey } = await resUrl.json();
+
+      // BƯỚC 2: Upload trực tiếp lên R2
+      // Lưu ý: Tuyệt đối KHÔNG thêm Authorization hay các header lạ để tránh hỏng chữ ký (Signature)
+         const uploadRes = await fetch(signedUrl, {
+        method: "PUT",
+        body: file,
+        // CHỈ gửi duy nhất Content-Type. 
+        // Tuyệt đối không thêm Authorization, X-Requested-With hay bất kỳ header nào khác.
+        headers: {
+            "Content-Type": file.type 
+        }
+        });
+
+      if (!uploadRes.ok) throw new Error("Quá trình đẩy file lên kho R2 thất bại.");
+
+      // BƯỚC 3: Yêu cầu Worker xử lý (ConvertAPI)
+      setStatus("processing");
+      const resProcess = await fetch(`${API_URL}/process`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fileKey, action: "Split PDF", options: pages })
+      });
+      
+      const data = await resProcess.json();
+
+      if (data.success) {
+        setDownloadUrl(data.downloadUrl);
+        setResultFileName(data.fileName);
+        setStatus("done");
+      } else {
+        throw new Error(data.error || "AI không thể xử lý tệp tin này.");
+      }
+    } catch (e) {
+      console.error("Lỗi quy trình:", e);
+      setErrorMessage(e.message);
+      setStatus("error");
+    }
+  };
+
+  const resetForm = () => {
+    setFile(null);
+    setStatus("");
+    setErrorMessage("");
+    setDownloadUrl(null);
+    setResultFileName("");
+  };
+
+  return (
+    <div className="max-w-3xl mx-auto px-6 py-16 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+      {/* Badge & Title */}
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 backdrop-blur-md text-zinc-400 text-[11px] font-bold uppercase tracking-[0.2em] rounded-full border border-white/10 mb-6">
+          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
+          Powered by R2 Direct Engine
+        </div>
+        <h2 className="text-5xl font-black text-white mb-4 tracking-tighter leading-tight">
+          Cắt tài liệu PDF
+        </h2>
+        <p className="text-zinc-400 text-lg">Trích xuất trang thông minh cho tệp tin quy mô lớn.</p>
+      </div>
+
+      <div className="space-y-6">
+        {/* Upload & Preview Zone */}
+        {status !== "done" && (
+          <div className={`relative group transition-all duration-500 ${status === "uploading" || status === "processing" ? "pointer-events-none opacity-50" : ""}`}>
+            <input 
+              type="file" 
+              accept=".pdf" 
+              onChange={(e) => setFile(e.target.files[0])} 
+              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" 
+            />
+            <div className={`flex flex-col items-center justify-center p-14 border-2 border-dashed rounded-[3rem] transition-all duration-500 ${
+              file ? 'border-indigo-500/50 bg-indigo-500/5 ring-4 ring-indigo-500/10' : 'border-zinc-800 bg-zinc-900/40 group-hover:border-zinc-600 group-hover:bg-zinc-900/60'
+            }`}>
+              {file ? (
+                <div className="flex items-center gap-4 text-left">
+                  <div className="p-4 bg-indigo-500/20 rounded-2xl text-indigo-400">
+                    <FileText size={32} />
+                  </div>
+                  <div>
+                    <p className="text-white font-bold text-lg truncate max-w-[250px]">{file.name}</p>
+                    <p className="text-zinc-500 text-sm font-mono">{(file.size / (1024 * 1024)).toFixed(2)} MB</p>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <UploadCloud className="w-14 h-14 mb-4 text-zinc-700 group-hover:text-zinc-500 transition-colors" />
+                  <p className="text-zinc-400 font-medium text-center">
+                    Kéo thả hoặc nhấp để tải lên PDF <br/>
+                    <span className="text-zinc-600 text-sm font-normal">(Hỗ trợ tệp lớn trên 100MB)</span>
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Configuration Panel */}
+        {file && status !== "done" && status !== "error" && (
+          <div className="bg-zinc-900/80 backdrop-blur-xl border border-zinc-800/50 p-8 rounded-[2.5rem] shadow-2xl space-y-5 animate-in zoom-in-95 duration-500">
+            <div className="flex justify-between items-end">
+              <label className="text-zinc-400 text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
+                <FileDigit size={14} className="text-indigo-500" /> Cấu hình tách trang
+              </label>
+              <span className="text-[10px] text-zinc-600 font-mono italic">VD: 1-5, 10, 15-20</span>
+            </div>
+            <input 
+              type="text" 
+              value={pages} 
+              onChange={(e) => setPages(e.target.value)}
+              className="w-full bg-black/50 border border-zinc-700/50 rounded-2xl px-6 py-4 text-xl text-white focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 font-mono transition-all"
+              disabled={status !== ""}
+            />
+          </div>
+        )}
+
+        {/* Error Message */}
+        {status === "error" && (
+          <div className="flex items-center gap-3 p-5 bg-red-500/10 border border-red-500/20 rounded-2xl text-red-400 text-sm animate-in shake duration-500">
+            <AlertCircle size={20} className="shrink-0" />
+            <p className="flex-1 font-medium">{errorMessage}</p>
+            <button onClick={resetForm} className="text-[10px] font-bold uppercase hover:underline">Thử lại</button>
+          </div>
+        )}
+
+        {/* Action Button */}
+        {file && status !== "done" && (
+          <button 
+            onClick={handleProcess}
+            disabled={status !== ""}
+            className={`w-full py-6 rounded-3xl font-black uppercase tracking-[0.15em] text-xs transition-all duration-500 flex justify-center items-center gap-3 shadow-2xl ${
+              status === "" 
+              ? "bg-white text-black hover:bg-zinc-200 active:scale-95 shadow-white/10" 
+              : "bg-zinc-800 text-zinc-500 cursor-wait"
+            }`}
+          >
+            {status === "uploading" && <><Loader2 className="animate-spin" size={20} /> Đang truyền tải trực tiếp lên R2...</>}
+            {status === "processing" && <><Loader2 className="animate-spin" size={20} /> AI đang tách trang PDF...</>}
+            {status === "" && <><Scissors size={18} /> Tiến hành tách trang</>}
+          </button>
+        )}
+
+        {/* Success Result Area */}
+        {status === "done" && (
+          <div className="animate-in zoom-in-95 duration-700">
+            <div className="p-10 bg-emerald-500/5 border border-emerald-500/20 rounded-[3rem] text-center shadow-2xl shadow-emerald-500/5">
+              <div className="w-20 h-20 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-500/20">
+                <CheckCircle2 className="text-black w-10 h-10" />
+              </div>
+              <h3 className="text-3xl font-black text-white mb-2">Trích xuất thành công!</h3>
+              <p className="text-zinc-400 mb-10 max-w-xs mx-auto text-sm">Tệp của bạn đã sẵn sàng. AI đã xử lý hoàn tất các trang: <span className="text-emerald-400 font-mono">{pages}</span></p>
+              
+              <div className="space-y-4">
+                <a 
+                  href={downloadUrl} 
+                  download={resultFileName}
+                  className="flex items-center justify-center gap-3 py-6 bg-emerald-500 text-black font-black uppercase tracking-widest text-sm rounded-[2rem] hover:bg-emerald-400 hover:scale-[1.02] transition-all shadow-xl shadow-emerald-500/20"
+                >
+                  <Download size={20} /> Tải xuống tệp đã cắt
+                </a>
+                
+                <button 
+                  onClick={resetForm}
+                  className="flex items-center justify-center gap-2 mx-auto pt-6 text-zinc-500 hover:text-white text-[10px] font-black uppercase tracking-[0.2em] transition-all"
+                >
+                  <RefreshCcw size={14} /> Bắt đầu tệp mới
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default SplitPdf;
+</file>
+
+<file path="src/index.css">
+@import "tailwindcss";
+
+/* Thiết lập nền tối mặc định cho toàn bộ trang */
+@theme {
+  --color-background: #09090b; /* Kéo màu kịch trần tối (zinc-950) */
+}
+
+body {
+  background-color: var(--color-background);
+  color: #e4e4e7; /* text-zinc-200 */
+}
+</file>
+
+<file path="src/main.jsx">
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+</file>
+
+<file path="vite.config.js">
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+})
+</file>
+
+</files>
