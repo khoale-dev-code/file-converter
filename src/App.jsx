@@ -14,8 +14,8 @@ import SplitPdf from './components/SplitPdf';
 import ImagesToPdf from './components/ImagesToPdf';
 import ImageConverter from './components/Imageconverter';
 import SplitDocx from './components/SplitDocx';
-import { API_BASE_URL } from ''; // Import cái link mình vừa tạo
-
+// ✅ DÒNG ĐÚNG
+import API_BASE_URL from './api';
 // Layout chuẩn iOS (Navigation Bar trong suốt + Kính mờ)
 const Layout = ({ children }) => {
   return (
@@ -134,17 +134,17 @@ function App() {
             />
           </Layout>
         } />
-        <Route path="/excel-to-docx" element={
-          <Layout>
-            <BackendToolShell 
-              title="Cắt DOCX" 
-              description="Tách file Word theo heading, đoạn hoặc trang." 
-              accept=".docx" 
-              icon={Scissors} 
-              expectedAction="Split DOCX"
-            />
-          </Layout>
-        } />
+       <Route path="/excel-to-docx" element={
+        <Layout>
+          <BackendToolShell 
+            title="Cắt DOCX" 
+            description="Tách file Word theo heading, đoạn hoặc trang." 
+            accept=".docx" 
+            icon={Scissors} 
+            expectedAction="Split DOCX"
+          />
+        </Layout>
+      } />
 
       </Routes>
     </Router>
