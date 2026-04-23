@@ -10,7 +10,8 @@ const BackendToolShell = ({ title, description, accept, icon: Icon, expectedActi
   const [progress, setProgress] = useState(0);
   const fileInputRef = useRef(null);
 
-  const API_URL = "https://file-forge-backend.file-forge-api.workers.dev/process";
+  // ĐÃ CẬP NHẬT: Đường dẫn API trỏ về server Render mới của bạn
+  const API_URL = "https://file-forge-backend.onrender.com/process";
 
   const handleFileUpload = (e) => {
     const selectedFile = e.target ? e.target.files[0] : e[0];
@@ -63,7 +64,7 @@ const BackendToolShell = ({ title, description, accept, icon: Icon, expectedActi
         alert("Lỗi: " + (data.error || "Không thể xử lý file"));
       }
     } catch (error) {
-      alert("Lỗi kết nối máy chủ.");
+      alert("Lỗi kết nối máy chủ. Vui lòng kiểm tra lại backend.");
     } finally {
       clearInterval(progressInterval);
       setIsProcessing(false);
