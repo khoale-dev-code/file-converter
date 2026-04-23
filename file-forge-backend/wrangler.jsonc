@@ -1,0 +1,64 @@
+/**
+ * Wrangler Configuration for File Forge Backend
+ * Docs: https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "file-forge-backend",
+	"main": "src/index.js",
+	"compatibility_date": "2026-04-13",
+
+	// FIX: Gộp thành một mảng duy nhất — tránh bị ghi đè
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+
+	// Static assets
+	"assets": {
+		"directory": "./public"
+	},
+
+	// Observability / logging
+	"observability": {
+		"enabled": true
+	},
+
+	// Upload source maps để debug dễ hơn trên Cloudflare dashboard
+	"upload_source_maps": true,
+
+	// R2 Bucket binding
+	"r2_buckets": [
+		{
+			"binding": "FILE_STORAGE",
+			"bucket_name": "file-forge-storage"
+		}
+	]
+
+	// --- CÁC BINDING TÙY CHỌN (bỏ comment khi cần) ---
+
+	// Smart Placement — tự động đặt Worker gần nguồn dữ liệu nhất
+	// "placement": { "mode": "smart" },
+
+	// Environment Variables (dùng secrets cho dữ liệu nhạy cảm)
+	// Lệnh cấu hình secret:
+	// wrangler secret put CONVERTAPI_SECRET
+	// "vars": {
+	// 	"MY_VARIABLE": "production_value"
+	// },
+
+	// KV Namespace
+	// "kv_namespaces": [
+	// 	{ "binding": "MY_KV", "id": "xxxx" }
+	// ],
+
+	// D1 Database
+	// "d1_databases": [
+	// 	{ "binding": "MY_DB", "database_name": "my-db", "database_id": "xxxx" }
+	// ],
+
+	// Service Bindings (giao tiếp giữa các Workers)
+	// "services": [
+	// 	{ "binding": "MY_SERVICE", "service": "my-other-worker" }
+	// ]
+}
