@@ -11,8 +11,7 @@ const BackendToolShell = ({ title, description, accept, icon: Icon, expectedActi
   const fileInputRef = useRef(null);
 
   // ĐÃ CẬP NHẬT: Đường dẫn API trỏ về server Render mới của bạn
-  const API_URL = "https://file-forge-backend.onrender.com/process";
-
+const API_URL = "https://file-forge-backend.onrender.com/process";
   const handleFileUpload = (e) => {
     const selectedFile = e.target ? e.target.files[0] : e[0];
     if (selectedFile) {
