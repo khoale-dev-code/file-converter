@@ -4,7 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
-// Vì dùng "type": "module", chúng ta cần định nghĩa lại __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -18,11 +17,15 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Bổ sung khối này để Vercel build đúng chuẩn
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+  },
   server: {
-    port: 5173, // Port khác với Backend
+    port: 5173,
     open: true,
     proxy: {
-      // Khi gọi fetch('/api/process'), Vite sẽ tự chuyển sang http://localhost:3000/process
       '/api': {
         target: 'http://localhost:3000',
         changeOrigin: true,
